@@ -149,6 +149,9 @@ function BarWithPercentiles({buckets, percentiles}) {
     const options = {
         responsive: true,
         plugins: {
+            legend: {
+                display: false, // This will do dataset labels
+            },
             annotation: {
                 annotations: {
                     p25Line,
@@ -196,9 +199,9 @@ export function App() {
             <section>
                 <BookSelect value={selectedBookA} books={booksNonFiction} onChange={onSelectBookA} />
             </section>
-            {/* <section>
+            <section>
                 {statsA && <BarDemo />}
-            </section> */}
+            </section>
             <section>
                 {statsA && <BarWithPercentiles buckets={statsA.stats.structure.word_length_buckets} percentiles={statsA.stats.structure.word_length_percentiles} />}
             </section>
