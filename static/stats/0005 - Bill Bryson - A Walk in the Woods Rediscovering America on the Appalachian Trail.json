@@ -1,0 +1,6078 @@
+{
+    "author": "Bill Bryson",
+    "avgRating": "4.06",
+    "id": 5,
+    "number": 5,
+    "numberOfRatings": "373,032",
+    "title": "A Walk in the Woods",
+    "url": "https://www.goodreads.com/book/show/9791.A_Walk_in_the_Woods",
+    "subtitle": "Rediscovering America on the Appalachian Trail",
+    "book_file": "0005 - Bill Bryson - A Walk in the Woods Rediscovering America on the Appalachian Trail.epub",
+    "cover_file": "0005 - Bill Bryson - A Walk in the Woods Rediscovering America on the Appalachian Trail.jpg",
+    "isbn": "9780307279460",
+    "pages": "397",
+    "year": "1998",
+    "genres": [
+        "Nonfiction",
+        "Travel",
+        "Autobiography",
+        "Memoir",
+        "Humor",
+        "Environment",
+        "Nature",
+        "Adventure",
+        "Audiobook",
+        "Biography",
+        "Outdoors",
+        "History"
+    ],
+    "stats": {
+        "parsing": {
+            "total_files": 4,
+            "skipped_files": 1,
+            "total_characters": 523535,
+            "parsed_characters": 523455,
+            "percent_characters": 99
+        },
+        "structure": {
+            "words_count": 95088,
+            "sentences_count": 5470,
+            "paragraphs_count": 255,
+            "characters_count": 413037,
+            "word_length_percentiles": {
+                "p25": 3.0,
+                "p50": 4.0,
+                "p75": 6.0,
+                "p90": 8.0,
+                "p95": 9.0,
+                "p99": 11.0,
+                "std": 2.3687155350807045,
+                "count": 93037,
+                "average": 4.36690778937412
+            },
+            "word_length_buckets": [
+                {
+                    "start": 1,
+                    "end": 2,
+                    "count": 20975
+                },
+                {
+                    "start": 3,
+                    "end": 5,
+                    "count": 47522
+                },
+                {
+                    "start": 6,
+                    "end": 9,
+                    "count": 20979
+                },
+                {
+                    "start": 10,
+                    "end": 15,
+                    "count": 3539
+                },
+                {
+                    "start": 16,
+                    "end": 20,
+                    "count": 22
+                }
+            ],
+            "sentence_length_percentiles": {
+                "p25": 35.0,
+                "p50": 72.0,
+                "p75": 132.0,
+                "p90": 202.0,
+                "p95": 250.0,
+                "p99": 356.9300000000012,
+                "std": 79.61411777525313,
+                "count": 5470,
+                "average": 94.71425959780622
+            },
+            "sentence_length_buckets": [
+                {
+                    "start": 1,
+                    "end": 250,
+                    "count": 5188
+                },
+                {
+                    "start": 250,
+                    "end": 500,
+                    "count": 273
+                },
+                {
+                    "start": 500,
+                    "end": 750,
+                    "count": 8
+                },
+                {
+                    "start": 750,
+                    "end": 1000,
+                    "count": 1
+                },
+                {
+                    "start": 1000,
+                    "end": 1250,
+                    "count": 0
+                },
+                {
+                    "start": 1250,
+                    "end": 1500,
+                    "count": 0
+                },
+                {
+                    "start": 1500,
+                    "end": 1750,
+                    "count": 0
+                },
+                {
+                    "start": 1750,
+                    "end": 2000,
+                    "count": 0
+                },
+                {
+                    "start": 2000,
+                    "end": 834,
+                    "count": 0
+                }
+            ],
+            "syllables_percentiles": {
+                "p25": 1.0,
+                "p50": 1.0,
+                "p75": 1.0,
+                "p90": 2.0,
+                "p95": 3.0,
+                "p99": 4.0,
+                "std": 0.688605404876974,
+                "count": 93037,
+                "average": 1.3384137493685309
+            },
+            "syllables_buckets": [
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 70504
+                },
+                {
+                    "start": 2,
+                    "end": 2,
+                    "count": 15809
+                },
+                {
+                    "start": 3,
+                    "end": 3,
+                    "count": 4900
+                },
+                {
+                    "start": 4,
+                    "end": 4,
+                    "count": 1471
+                },
+                {
+                    "start": 5,
+                    "end": 8,
+                    "count": 353
+                }
+            ],
+            "words_per_paragraph_percentiles": {
+                "p25": 79.5,
+                "p50": 122.0,
+                "p75": 170.0,
+                "p90": 251.99999999999991,
+                "p95": 1296.3999999999928,
+                "p99": 6650.900000000009,
+                "std": 1254.0013361557292,
+                "count": 255,
+                "average": 364.64313725490194
+            },
+            "words_per_paragraph_buckets": [
+                {
+                    "start": 1,
+                    "end": 50,
+                    "count": 32
+                },
+                {
+                    "start": 50,
+                    "end": 100,
+                    "count": 62
+                },
+                {
+                    "start": 100,
+                    "end": 200,
+                    "count": 122
+                },
+                {
+                    "start": 200,
+                    "end": 400,
+                    "count": 21
+                },
+                {
+                    "start": 400,
+                    "end": 12669,
+                    "count": 18
+                }
+            ],
+            "sentences_per_paragraph_percentiles": {
+                "p25": 3.0,
+                "p50": 6.0,
+                "p75": 8.0,
+                "p90": 12.0,
+                "p95": 95.99999999999983,
+                "p99": 399.50000000000057,
+                "std": 78.7334828555694,
+                "count": 255,
+                "average": 21.45098039215686
+            },
+            "sentences_per_paragraph_buckets": [
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 19
+                },
+                {
+                    "start": 2,
+                    "end": 3,
+                    "count": 53
+                },
+                {
+                    "start": 4,
+                    "end": 6,
+                    "count": 82
+                },
+                {
+                    "start": 7,
+                    "end": 10,
+                    "count": 65
+                },
+                {
+                    "start": 10,
+                    "end": 14,
+                    "count": 30
+                },
+                {
+                    "start": 15,
+                    "end": 746,
+                    "count": 21
+                }
+            ],
+            "words_per_sentence_percentiles": {
+                "p25": 7.0,
+                "p50": 13.0,
+                "p75": 24.0,
+                "p90": 36.0,
+                "p95": 43.0,
+                "p99": 62.3100000000004,
+                "std": 13.796973897996004,
+                "count": 5470,
+                "average": 16.99890310786106
+            },
+            "words_per_sentence_buckets": [
+                {
+                    "start": 1,
+                    "end": 5,
+                    "count": 698
+                },
+                {
+                    "start": 6,
+                    "end": 10,
+                    "count": 1016
+                },
+                {
+                    "start": 11,
+                    "end": 15,
+                    "count": 674
+                },
+                {
+                    "start": 16,
+                    "end": 20,
+                    "count": 555
+                },
+                {
+                    "start": 21,
+                    "end": 25,
+                    "count": 408
+                },
+                {
+                    "start": 26,
+                    "end": 30,
+                    "count": 343
+                },
+                {
+                    "start": 31,
+                    "end": 35,
+                    "count": 205
+                },
+                {
+                    "start": 36,
+                    "end": 40,
+                    "count": 148
+                },
+                {
+                    "start": 41,
+                    "end": 45,
+                    "count": 121
+                },
+                {
+                    "start": 46,
+                    "end": 138,
+                    "count": 231
+                }
+            ],
+            "clauses_per_sentence_percentiles": {
+                "p25": 1.0,
+                "p50": 2.0,
+                "p75": 3.0,
+                "p90": 4.0,
+                "p95": 5.0,
+                "p99": 7.0,
+                "std": 1.5097066407803152,
+                "count": 4919,
+                "average": 2.240089449075015
+            },
+            "clauses_per_sentence_buckets": [
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 2023
+                },
+                {
+                    "start": 2,
+                    "end": 2,
+                    "count": 1314
+                },
+                {
+                    "start": 3,
+                    "end": 3,
+                    "count": 763
+                },
+                {
+                    "start": 4,
+                    "end": 4,
+                    "count": 403
+                },
+                {
+                    "start": 5,
+                    "end": 5,
+                    "count": 204
+                },
+                {
+                    "start": 6,
+                    "end": 6,
+                    "count": 114
+                },
+                {
+                    "start": 7,
+                    "end": 15,
+                    "count": 98
+                }
+            ]
+        },
+        "dictionary": {
+            "missing_word_frequencies_percent": 3.388018723557476,
+            "word_frequency_percentiles": {
+                "p25": 10.0,
+                "p50": 70.0,
+                "p75": 919.0,
+                "p90": 5112.0,
+                "p95": 13055.0,
+                "p99": 20000.0,
+                "std": 4385.22882949254,
+                "count": 88872,
+                "average": 1780.2125078764966
+            },
+            "word_frequency_buckets": [
+                {
+                    "start": 1,
+                    "end": 1000,
+                    "count": 67426
+                },
+                {
+                    "start": 1000,
+                    "end": 2000,
+                    "count": 6022
+                },
+                {
+                    "start": 2000,
+                    "end": 3000,
+                    "count": 3170
+                },
+                {
+                    "start": 3000,
+                    "end": 5000,
+                    "count": 3164
+                },
+                {
+                    "start": 5000,
+                    "end": 7500,
+                    "count": 2282
+                },
+                {
+                    "start": 7500,
+                    "end": 10000,
+                    "count": 1295
+                },
+                {
+                    "start": 10000,
+                    "end": 15000,
+                    "count": 1573
+                },
+                {
+                    "start": 15000,
+                    "end": 16000,
+                    "count": 254
+                },
+                {
+                    "start": 20000,
+                    "end": 20000,
+                    "count": 3011
+                }
+            ],
+            "pos_word_frequency_percentiles": {
+                "VERB": {
+                    "p25": 88.0,
+                    "p50": 379.0,
+                    "p75": 1454.0,
+                    "p90": 5112.0,
+                    "p95": 8569.099999999986,
+                    "p99": 15986.0,
+                    "std": 3133.738599380809,
+                    "count": 11707,
+                    "average": 1664.7457931152303
+                },
+                "NOUN": {
+                    "p25": 453.0,
+                    "p50": 1292.0,
+                    "p75": 3129.0,
+                    "p90": 7722.0,
+                    "p95": 12029.0,
+                    "p99": 17717.239999999994,
+                    "std": 3775.5860549146337,
+                    "count": 15877,
+                    "average": 2767.706241733325
+                },
+                "PRONOUN": {
+                    "p25": 13.0,
+                    "p50": 24.0,
+                    "p75": 37.0,
+                    "p90": 53.0,
+                    "p95": 110.40000000000873,
+                    "p99": 1071.0,
+                    "std": 284.1215443552823,
+                    "count": 10739,
+                    "average": 67.25328242853152
+                },
+                "ADVERB": {
+                    "p25": 93.0,
+                    "p50": 235.0,
+                    "p75": 986.5,
+                    "p90": 4383.999999999989,
+                    "p95": 9072.39999999997,
+                    "p99": 16973.75999999998,
+                    "std": 3217.28118488276,
+                    "count": 6419,
+                    "average": 1478.9565352858701
+                },
+                "ADJECTIVE": {
+                    "p25": 243.0,
+                    "p50": 1142.0,
+                    "p75": 4412.0,
+                    "p90": 10382.0,
+                    "p95": 13995.5,
+                    "p99": 17952.850000000006,
+                    "std": 4495.003861719668,
+                    "count": 6296,
+                    "average": 3246.234275730623
+                },
+                "PREPOSITION": {
+                    "p25": 5.0,
+                    "p50": 9.0,
+                    "p75": 23.0,
+                    "p90": 116.0,
+                    "p95": 242.0,
+                    "p99": 933.0,
+                    "std": 349.0998941156706,
+                    "count": 11316,
+                    "average": 74.57378932484977
+                },
+                "CONJUNCTION": {
+                    "p25": 4.0,
+                    "p50": 8.0,
+                    "p75": 28.0,
+                    "p90": 72.0,
+                    "p95": 142.0,
+                    "p99": 451.0,
+                    "std": 210.6288781044127,
+                    "count": 6176,
+                    "average": 46.389086787564764
+                },
+                "INTERJECTION": {
+                    "p25": 93.0,
+                    "p50": 1306.0,
+                    "p75": 2361.0,
+                    "p90": 4283.0,
+                    "p95": 7694.299999999985,
+                    "p99": 16045.0,
+                    "std": 2695.744231208706,
+                    "count": 327,
+                    "average": 1839.6544342507646
+                },
+                "DETERMINER": {
+                    "p25": 1.0,
+                    "p50": 6.0,
+                    "p75": 6.0,
+                    "p90": 25.0,
+                    "p95": 63.0,
+                    "p99": 206.0,
+                    "std": 114.80772958123106,
+                    "count": 9090,
+                    "average": 18.478437843784377
+                }
+            },
+            "pos_word_frequency_buckets": {
+                "VERB": [
+                    {
+                        "start": 1,
+                        "end": 1000,
+                        "count": 8090
+                    },
+                    {
+                        "start": 1000,
+                        "end": 2000,
+                        "count": 1173
+                    },
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "count": 486
+                    },
+                    {
+                        "start": 3000,
+                        "end": 5000,
+                        "count": 753
+                    },
+                    {
+                        "start": 5000,
+                        "end": 7500,
+                        "count": 500
+                    },
+                    {
+                        "start": 7500,
+                        "end": 10000,
+                        "count": 267
+                    },
+                    {
+                        "start": 10000,
+                        "end": 15000,
+                        "count": 286
+                    },
+                    {
+                        "start": 15000,
+                        "end": 16000,
+                        "count": 36
+                    },
+                    {
+                        "start": 20000,
+                        "end": 19960,
+                        "count": 0
+                    }
+                ],
+                "NOUN": [
+                    {
+                        "start": 1,
+                        "end": 1000,
+                        "count": 6865
+                    },
+                    {
+                        "start": 1000,
+                        "end": 2000,
+                        "count": 3169
+                    },
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "count": 1710
+                    },
+                    {
+                        "start": 3000,
+                        "end": 5000,
+                        "count": 1434
+                    },
+                    {
+                        "start": 5000,
+                        "end": 7500,
+                        "count": 1055
+                    },
+                    {
+                        "start": 7500,
+                        "end": 10000,
+                        "count": 563
+                    },
+                    {
+                        "start": 10000,
+                        "end": 15000,
+                        "count": 677
+                    },
+                    {
+                        "start": 15000,
+                        "end": 16000,
+                        "count": 121
+                    },
+                    {
+                        "start": 20000,
+                        "end": 19976,
+                        "count": 0
+                    }
+                ],
+                "PRONOUN": [
+                    {
+                        "start": 1,
+                        "end": 1000,
+                        "count": 10628
+                    },
+                    {
+                        "start": 1000,
+                        "end": 2000,
+                        "count": 78
+                    },
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "count": 17
+                    },
+                    {
+                        "start": 3000,
+                        "end": 5000,
+                        "count": 7
+                    },
+                    {
+                        "start": 5000,
+                        "end": 7500,
+                        "count": 7
+                    },
+                    {
+                        "start": 7500,
+                        "end": 10000,
+                        "count": 2
+                    },
+                    {
+                        "start": 10000,
+                        "end": 15000,
+                        "count": 0
+                    },
+                    {
+                        "start": 15000,
+                        "end": 16000,
+                        "count": 0
+                    },
+                    {
+                        "start": 20000,
+                        "end": 8714,
+                        "count": 0
+                    }
+                ],
+                "ADVERB": [
+                    {
+                        "start": 1,
+                        "end": 1000,
+                        "count": 4842
+                    },
+                    {
+                        "start": 1000,
+                        "end": 2000,
+                        "count": 478
+                    },
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "count": 289
+                    },
+                    {
+                        "start": 3000,
+                        "end": 5000,
+                        "count": 252
+                    },
+                    {
+                        "start": 5000,
+                        "end": 7500,
+                        "count": 128
+                    },
+                    {
+                        "start": 7500,
+                        "end": 10000,
+                        "count": 154
+                    },
+                    {
+                        "start": 10000,
+                        "end": 15000,
+                        "count": 170
+                    },
+                    {
+                        "start": 15000,
+                        "end": 16000,
+                        "count": 24
+                    },
+                    {
+                        "start": 20000,
+                        "end": 19982,
+                        "count": 0
+                    }
+                ],
+                "ADJECTIVE": [
+                    {
+                        "start": 1,
+                        "end": 1000,
+                        "count": 2971
+                    },
+                    {
+                        "start": 1000,
+                        "end": 2000,
+                        "count": 831
+                    },
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "count": 504
+                    },
+                    {
+                        "start": 3000,
+                        "end": 5000,
+                        "count": 536
+                    },
+                    {
+                        "start": 5000,
+                        "end": 7500,
+                        "count": 510
+                    },
+                    {
+                        "start": 7500,
+                        "end": 10000,
+                        "count": 264
+                    },
+                    {
+                        "start": 10000,
+                        "end": 15000,
+                        "count": 428
+                    },
+                    {
+                        "start": 15000,
+                        "end": 16000,
+                        "count": 72
+                    },
+                    {
+                        "start": 20000,
+                        "end": 19967,
+                        "count": 0
+                    }
+                ],
+                "PREPOSITION": [
+                    {
+                        "start": 1,
+                        "end": 1000,
+                        "count": 11223
+                    },
+                    {
+                        "start": 1000,
+                        "end": 2000,
+                        "count": 41
+                    },
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "count": 8
+                    },
+                    {
+                        "start": 3000,
+                        "end": 5000,
+                        "count": 18
+                    },
+                    {
+                        "start": 5000,
+                        "end": 7500,
+                        "count": 25
+                    },
+                    {
+                        "start": 7500,
+                        "end": 10000,
+                        "count": 0
+                    },
+                    {
+                        "start": 10000,
+                        "end": 15000,
+                        "count": 1
+                    },
+                    {
+                        "start": 15000,
+                        "end": 16000,
+                        "count": 0
+                    },
+                    {
+                        "start": 20000,
+                        "end": 11318,
+                        "count": 0
+                    }
+                ],
+                "CONJUNCTION": [
+                    {
+                        "start": 1,
+                        "end": 1000,
+                        "count": 6133
+                    },
+                    {
+                        "start": 1000,
+                        "end": 2000,
+                        "count": 21
+                    },
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "count": 5
+                    },
+                    {
+                        "start": 3000,
+                        "end": 5000,
+                        "count": 17
+                    },
+                    {
+                        "start": 5000,
+                        "end": 7500,
+                        "count": 0
+                    },
+                    {
+                        "start": 7500,
+                        "end": 10000,
+                        "count": 0
+                    },
+                    {
+                        "start": 10000,
+                        "end": 15000,
+                        "count": 0
+                    },
+                    {
+                        "start": 15000,
+                        "end": 16000,
+                        "count": 0
+                    },
+                    {
+                        "start": 20000,
+                        "end": 4137,
+                        "count": 0
+                    }
+                ],
+                "INTERJECTION": [
+                    {
+                        "start": 1,
+                        "end": 1000,
+                        "count": 150
+                    },
+                    {
+                        "start": 1000,
+                        "end": 2000,
+                        "count": 66
+                    },
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "count": 42
+                    },
+                    {
+                        "start": 3000,
+                        "end": 5000,
+                        "count": 41
+                    },
+                    {
+                        "start": 5000,
+                        "end": 7500,
+                        "count": 11
+                    },
+                    {
+                        "start": 7500,
+                        "end": 10000,
+                        "count": 9
+                    },
+                    {
+                        "start": 10000,
+                        "end": 15000,
+                        "count": 3
+                    },
+                    {
+                        "start": 15000,
+                        "end": 16000,
+                        "count": 0
+                    },
+                    {
+                        "start": 20000,
+                        "end": 16447,
+                        "count": 0
+                    }
+                ],
+                "DETERMINER": [
+                    {
+                        "start": 1,
+                        "end": 1000,
+                        "count": 9081
+                    },
+                    {
+                        "start": 1000,
+                        "end": 2000,
+                        "count": 5
+                    },
+                    {
+                        "start": 2000,
+                        "end": 3000,
+                        "count": 3
+                    },
+                    {
+                        "start": 3000,
+                        "end": 5000,
+                        "count": 0
+                    },
+                    {
+                        "start": 5000,
+                        "end": 7500,
+                        "count": 0
+                    },
+                    {
+                        "start": 7500,
+                        "end": 10000,
+                        "count": 1
+                    },
+                    {
+                        "start": 10000,
+                        "end": 15000,
+                        "count": 0
+                    },
+                    {
+                        "start": 15000,
+                        "end": 16000,
+                        "count": 0
+                    },
+                    {
+                        "start": 20000,
+                        "end": 7797,
+                        "count": 0
+                    }
+                ]
+            },
+            "missing_word_prevalances_percent": 0.7336393914843821,
+            "word_prevalence_percentiles": {
+                "p25": 2.18,
+                "p50": 2.326,
+                "p75": 2.434,
+                "p90": 2.576,
+                "p95": 2.576,
+                "p99": 2.576,
+                "std": 0.5119865901689621,
+                "count": 88872,
+                "average": 2.2367002768025923
+            },
+            "word_prevalence_buckets": [
+                {
+                    "start": -3,
+                    "end": -2.5,
+                    "count": 652
+                },
+                {
+                    "start": -2.5,
+                    "end": -2,
+                    "count": 0
+                },
+                {
+                    "start": -2,
+                    "end": -1.5,
+                    "count": 0
+                },
+                {
+                    "start": -1.5,
+                    "end": -1,
+                    "count": 3
+                },
+                {
+                    "start": -1,
+                    "end": -0.5,
+                    "count": 11
+                },
+                {
+                    "start": -0.5,
+                    "end": 0,
+                    "count": 27
+                },
+                {
+                    "start": 0,
+                    "end": 0.5,
+                    "count": 105
+                },
+                {
+                    "start": 0.5,
+                    "end": 1,
+                    "count": 200
+                },
+                {
+                    "start": 1,
+                    "end": 1.5,
+                    "count": 606
+                },
+                {
+                    "start": 1.5,
+                    "end": 2,
+                    "count": 7124
+                },
+                {
+                    "start": 2,
+                    "end": 2.5,
+                    "count": 70033
+                },
+                {
+                    "start": 2.5,
+                    "end": 3,
+                    "count": 10111
+                }
+            ],
+            "pos_word_prevalence_percentiles": {
+                "VERB": {
+                    "p25": 2.235,
+                    "p50": 2.33,
+                    "p75": 2.434,
+                    "p90": 2.576,
+                    "p95": 2.576,
+                    "p99": 2.576,
+                    "std": 0.2211664103573316,
+                    "count": 11998,
+                    "average": 2.313364644107351
+                },
+                "NOUN": {
+                    "p25": 2.255,
+                    "p50": 2.345,
+                    "p75": 2.44,
+                    "p90": 2.576,
+                    "p95": 2.576,
+                    "p99": 2.576,
+                    "std": 0.30803719370232935,
+                    "count": 16964,
+                    "average": 2.3118715515208677
+                },
+                "PRONOUN": {
+                    "p25": 2.173,
+                    "p50": 2.318,
+                    "p75": 2.441,
+                    "p90": 2.576,
+                    "p95": 2.576,
+                    "p99": 2.576,
+                    "std": 0.2942768717529231,
+                    "count": 10735,
+                    "average": 2.2292055891942244
+                },
+                "ADVERB": {
+                    "p25": 2.247,
+                    "p50": 2.331,
+                    "p75": 2.433,
+                    "p90": 2.576,
+                    "p95": 2.576,
+                    "p99": 2.576,
+                    "std": 0.2284036313246891,
+                    "count": 6854,
+                    "average": 2.3116105923548296
+                },
+                "ADJECTIVE": {
+                    "p25": 2.247,
+                    "p50": 2.336,
+                    "p75": 2.436,
+                    "p90": 2.576,
+                    "p95": 2.576,
+                    "p99": 2.576,
+                    "std": 0.27179999885280137,
+                    "count": 6809,
+                    "average": 2.304987369657806
+                },
+                "PREPOSITION": {
+                    "p25": 2.118,
+                    "p50": 2.314,
+                    "p75": 2.322,
+                    "p90": 2.576,
+                    "p95": 2.576,
+                    "p99": 2.576,
+                    "std": 0.1515237656928767,
+                    "count": 11332,
+                    "average": 2.273121690787151
+                },
+                "CONJUNCTION": {
+                    "p25": 2.316,
+                    "p50": 2.434,
+                    "p75": 2.434,
+                    "p90": 2.434,
+                    "p95": 2.434,
+                    "p99": 2.576,
+                    "std": 0.1216185228423328,
+                    "count": 6177,
+                    "average": 2.3569391290270363
+                },
+                "INTERJECTION": {
+                    "p25": 1.987,
+                    "p50": 2.235,
+                    "p75": 2.432,
+                    "p90": 2.432,
+                    "p95": 2.432,
+                    "p99": 2.576,
+                    "std": 0.31878835232659286,
+                    "count": 327,
+                    "average": 2.1472110091743115
+                },
+                "DETERMINER": {
+                    "p25": 1.917,
+                    "p50": 2.328,
+                    "p75": 2.328,
+                    "p90": 2.328,
+                    "p95": 2.424,
+                    "p99": 2.441,
+                    "std": 0.19973604450536322,
+                    "count": 9090,
+                    "average": 2.180512211221122
+                }
+            },
+            "pos_word_prevalence_buckets": {
+                "VERB": [
+                    {
+                        "start": -3,
+                        "end": -2.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -2.5,
+                        "end": -2,
+                        "count": 0
+                    },
+                    {
+                        "start": -2,
+                        "end": -1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -1.5,
+                        "end": -1,
+                        "count": 0
+                    },
+                    {
+                        "start": -1,
+                        "end": -0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -0.5,
+                        "end": 0,
+                        "count": 1
+                    },
+                    {
+                        "start": 0,
+                        "end": 0.5,
+                        "count": 13
+                    },
+                    {
+                        "start": 0.5,
+                        "end": 1,
+                        "count": 41
+                    },
+                    {
+                        "start": 1,
+                        "end": 1.5,
+                        "count": 90
+                    },
+                    {
+                        "start": 1.5,
+                        "end": 2,
+                        "count": 293
+                    },
+                    {
+                        "start": 2,
+                        "end": 2.5,
+                        "count": 9755
+                    },
+                    {
+                        "start": 2.5,
+                        "end": 3,
+                        "count": 1805
+                    }
+                ],
+                "NOUN": [
+                    {
+                        "start": -3,
+                        "end": -2.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -2.5,
+                        "end": -2,
+                        "count": 0
+                    },
+                    {
+                        "start": -2,
+                        "end": -1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -1.5,
+                        "end": -1,
+                        "count": 3
+                    },
+                    {
+                        "start": -1,
+                        "end": -0.5,
+                        "count": 11
+                    },
+                    {
+                        "start": -0.5,
+                        "end": 0,
+                        "count": 18
+                    },
+                    {
+                        "start": 0,
+                        "end": 0.5,
+                        "count": 76
+                    },
+                    {
+                        "start": 0.5,
+                        "end": 1,
+                        "count": 95
+                    },
+                    {
+                        "start": 1,
+                        "end": 1.5,
+                        "count": 273
+                    },
+                    {
+                        "start": 1.5,
+                        "end": 2,
+                        "count": 591
+                    },
+                    {
+                        "start": 2,
+                        "end": 2.5,
+                        "count": 13093
+                    },
+                    {
+                        "start": 2.5,
+                        "end": 3,
+                        "count": 2804
+                    }
+                ],
+                "PRONOUN": [
+                    {
+                        "start": -3,
+                        "end": -2.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -2.5,
+                        "end": -2,
+                        "count": 0
+                    },
+                    {
+                        "start": -2,
+                        "end": -1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -1.5,
+                        "end": -1,
+                        "count": 0
+                    },
+                    {
+                        "start": -1,
+                        "end": -0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -0.5,
+                        "end": 0,
+                        "count": 0
+                    },
+                    {
+                        "start": 0,
+                        "end": 0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": 0.5,
+                        "end": 1,
+                        "count": 0
+                    },
+                    {
+                        "start": 1,
+                        "end": 1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": 1.5,
+                        "end": 2,
+                        "count": 2416
+                    },
+                    {
+                        "start": 2,
+                        "end": 2.5,
+                        "count": 6781
+                    },
+                    {
+                        "start": 2.5,
+                        "end": 3,
+                        "count": 1538
+                    }
+                ],
+                "ADVERB": [
+                    {
+                        "start": -3,
+                        "end": -2.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -2.5,
+                        "end": -2,
+                        "count": 0
+                    },
+                    {
+                        "start": -2,
+                        "end": -1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -1.5,
+                        "end": -1,
+                        "count": 0
+                    },
+                    {
+                        "start": -1,
+                        "end": -0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -0.5,
+                        "end": 0,
+                        "count": 1
+                    },
+                    {
+                        "start": 0,
+                        "end": 0.5,
+                        "count": 2
+                    },
+                    {
+                        "start": 0.5,
+                        "end": 1,
+                        "count": 17
+                    },
+                    {
+                        "start": 1,
+                        "end": 1.5,
+                        "count": 105
+                    },
+                    {
+                        "start": 1.5,
+                        "end": 2,
+                        "count": 251
+                    },
+                    {
+                        "start": 2,
+                        "end": 2.5,
+                        "count": 5609
+                    },
+                    {
+                        "start": 2.5,
+                        "end": 3,
+                        "count": 869
+                    }
+                ],
+                "ADJECTIVE": [
+                    {
+                        "start": -3,
+                        "end": -2.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -2.5,
+                        "end": -2,
+                        "count": 0
+                    },
+                    {
+                        "start": -2,
+                        "end": -1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -1.5,
+                        "end": -1,
+                        "count": 0
+                    },
+                    {
+                        "start": -1,
+                        "end": -0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -0.5,
+                        "end": 0,
+                        "count": 2
+                    },
+                    {
+                        "start": 0,
+                        "end": 0.5,
+                        "count": 13
+                    },
+                    {
+                        "start": 0.5,
+                        "end": 1,
+                        "count": 45
+                    },
+                    {
+                        "start": 1,
+                        "end": 1.5,
+                        "count": 120
+                    },
+                    {
+                        "start": 1.5,
+                        "end": 2,
+                        "count": 324
+                    },
+                    {
+                        "start": 2,
+                        "end": 2.5,
+                        "count": 5280
+                    },
+                    {
+                        "start": 2.5,
+                        "end": 3,
+                        "count": 1025
+                    }
+                ],
+                "PREPOSITION": [
+                    {
+                        "start": -3,
+                        "end": -2.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -2.5,
+                        "end": -2,
+                        "count": 0
+                    },
+                    {
+                        "start": -2,
+                        "end": -1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -1.5,
+                        "end": -1,
+                        "count": 0
+                    },
+                    {
+                        "start": -1,
+                        "end": -0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -0.5,
+                        "end": 0,
+                        "count": 3
+                    },
+                    {
+                        "start": 0,
+                        "end": 0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": 0.5,
+                        "end": 1,
+                        "count": 0
+                    },
+                    {
+                        "start": 1,
+                        "end": 1.5,
+                        "count": 1
+                    },
+                    {
+                        "start": 1.5,
+                        "end": 2,
+                        "count": 33
+                    },
+                    {
+                        "start": 2,
+                        "end": 2.5,
+                        "count": 10075
+                    },
+                    {
+                        "start": 2.5,
+                        "end": 3,
+                        "count": 1220
+                    }
+                ],
+                "CONJUNCTION": [
+                    {
+                        "start": -3,
+                        "end": -2.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -2.5,
+                        "end": -2,
+                        "count": 0
+                    },
+                    {
+                        "start": -2,
+                        "end": -1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -1.5,
+                        "end": -1,
+                        "count": 0
+                    },
+                    {
+                        "start": -1,
+                        "end": -0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -0.5,
+                        "end": 0,
+                        "count": 0
+                    },
+                    {
+                        "start": 0,
+                        "end": 0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": 0.5,
+                        "end": 1,
+                        "count": 0
+                    },
+                    {
+                        "start": 1,
+                        "end": 1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": 1.5,
+                        "end": 2,
+                        "count": 19
+                    },
+                    {
+                        "start": 2,
+                        "end": 2.5,
+                        "count": 6034
+                    },
+                    {
+                        "start": 2.5,
+                        "end": 3,
+                        "count": 124
+                    }
+                ],
+                "INTERJECTION": [
+                    {
+                        "start": -3,
+                        "end": -2.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -2.5,
+                        "end": -2,
+                        "count": 0
+                    },
+                    {
+                        "start": -2,
+                        "end": -1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -1.5,
+                        "end": -1,
+                        "count": 0
+                    },
+                    {
+                        "start": -1,
+                        "end": -0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -0.5,
+                        "end": 0,
+                        "count": 0
+                    },
+                    {
+                        "start": 0,
+                        "end": 0.5,
+                        "count": 1
+                    },
+                    {
+                        "start": 0.5,
+                        "end": 1,
+                        "count": 1
+                    },
+                    {
+                        "start": 1,
+                        "end": 1.5,
+                        "count": 17
+                    },
+                    {
+                        "start": 1.5,
+                        "end": 2,
+                        "count": 72
+                    },
+                    {
+                        "start": 2,
+                        "end": 2.5,
+                        "count": 224
+                    },
+                    {
+                        "start": 2.5,
+                        "end": 3,
+                        "count": 12
+                    }
+                ],
+                "DETERMINER": [
+                    {
+                        "start": -3,
+                        "end": -2.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -2.5,
+                        "end": -2,
+                        "count": 0
+                    },
+                    {
+                        "start": -2,
+                        "end": -1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -1.5,
+                        "end": -1,
+                        "count": 0
+                    },
+                    {
+                        "start": -1,
+                        "end": -0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": -0.5,
+                        "end": 0,
+                        "count": 0
+                    },
+                    {
+                        "start": 0,
+                        "end": 0.5,
+                        "count": 0
+                    },
+                    {
+                        "start": 0.5,
+                        "end": 1,
+                        "count": 0
+                    },
+                    {
+                        "start": 1,
+                        "end": 1.5,
+                        "count": 0
+                    },
+                    {
+                        "start": 1.5,
+                        "end": 2,
+                        "count": 3124
+                    },
+                    {
+                        "start": 2,
+                        "end": 2.5,
+                        "count": 5939
+                    },
+                    {
+                        "start": 2.5,
+                        "end": 3,
+                        "count": 27
+                    }
+                ]
+            },
+            "most_common_lemmas": [
+                [
+                    "the",
+                    4521
+                ],
+                [
+                    "be",
+                    3240
+                ],
+                [
+                    "a",
+                    3133
+                ],
+                [
+                    "and",
+                    3087
+                ],
+                [
+                    "of",
+                    2408
+                ],
+                [
+                    "i",
+                    2283
+                ],
+                [
+                    "to",
+                    2270
+                ],
+                [
+                    "in",
+                    1739
+                ],
+                [
+                    "it",
+                    1463
+                ],
+                [
+                    "have",
+                    1154
+                ],
+                [
+                    "he",
+                    972
+                ],
+                [
+                    "that",
+                    958
+                ],
+                [
+                    "you",
+                    921
+                ],
+                [
+                    "we",
+                    832
+                ],
+                [
+                    "on",
+                    796
+                ],
+                [
+                    "with",
+                    741
+                ],
+                [
+                    "for",
+                    717
+                ],
+                [
+                    "at",
+                    649
+                ],
+                [
+                    "but",
+                    595
+                ],
+                [
+                    "do",
+                    584
+                ],
+                [
+                    "as",
+                    481
+                ],
+                [
+                    "there",
+                    466
+                ],
+                [
+                    "they",
+                    428
+                ],
+                [
+                    "from",
+                    403
+                ],
+                [
+                    "say",
+                    388
+                ],
+                [
+                    "my",
+                    383
+                ],
+                [
+                    "or",
+                    383
+                ],
+                [
+                    "so",
+                    361
+                ],
+                [
+                    "all",
+                    359
+                ],
+                [
+                    "go",
+                    349
+                ],
+                [
+                    "his",
+                    345
+                ],
+                [
+                    "would",
+                    342
+                ],
+                [
+                    "this",
+                    340
+                ],
+                [
+                    "an",
+                    336
+                ],
+                [
+                    "up",
+                    336
+                ],
+                [
+                    "by",
+                    315
+                ],
+                [
+                    "one",
+                    293
+                ],
+                [
+                    "not",
+                    286
+                ],
+                [
+                    "look",
+                    286
+                ],
+                [
+                    "trail",
+                    284
+                ],
+                [
+                    "if",
+                    271
+                ],
+                [
+                    "get",
+                    268
+                ],
+                [
+                    "then",
+                    268
+                ],
+                [
+                    "mile",
+                    265
+                ],
+                [
+                    "out",
+                    265
+                ],
+                [
+                    "day",
+                    265
+                ],
+                [
+                    "just",
+                    259
+                ],
+                [
+                    "what",
+                    259
+                ],
+                [
+                    "when",
+                    258
+                ],
+                [
+                    "know",
+                    249
+                ],
+                [
+                    "no",
+                    241
+                ],
+                [
+                    "could",
+                    240
+                ],
+                [
+                    "into",
+                    235
+                ],
+                [
+                    "more",
+                    233
+                ],
+                [
+                    "come",
+                    231
+                ],
+                [
+                    "about",
+                    219
+                ],
+                [
+                    "she",
+                    217
+                ],
+                [
+                    "like",
+                    212
+                ],
+                [
+                    "back",
+                    204
+                ],
+                [
+                    "time",
+                    202
+                ],
+                [
+                    "through",
+                    200
+                ],
+                [
+                    "which",
+                    199
+                ],
+                [
+                    "see",
+                    199
+                ],
+                [
+                    "over",
+                    194
+                ],
+                [
+                    "two",
+                    192
+                ],
+                [
+                    "well",
+                    175
+                ],
+                [
+                    "off",
+                    173
+                ],
+                [
+                    "take",
+                    170
+                ],
+                [
+                    "walk",
+                    169
+                ],
+                [
+                    "other",
+                    167
+                ],
+                [
+                    "long",
+                    164
+                ],
+                [
+                    "wood",
+                    163
+                ],
+                [
+                    "than",
+                    163
+                ],
+                [
+                    "our",
+                    163
+                ],
+                [
+                    "year",
+                    160
+                ],
+                [
+                    "now",
+                    157
+                ],
+                [
+                    "even",
+                    157
+                ],
+                [
+                    "some",
+                    156
+                ],
+                [
+                    "make",
+                    153
+                ],
+                [
+                    "tree",
+                    152
+                ],
+                [
+                    "down",
+                    152
+                ],
+                [
+                    "where",
+                    152
+                ],
+                [
+                    "little",
+                    151
+                ],
+                [
+                    "find",
+                    148
+                ],
+                [
+                    "how",
+                    147
+                ],
+                [
+                    "people",
+                    146
+                ],
+                [
+                    "think",
+                    142
+                ],
+                [
+                    "foot",
+                    141
+                ],
+                [
+                    "pack",
+                    139
+                ],
+                [
+                    "way",
+                    138
+                ],
+                [
+                    "hike",
+                    133
+                ],
+                [
+                    "their",
+                    133
+                ],
+                [
+                    "can",
+                    131
+                ],
+                [
+                    "here",
+                    130
+                ],
+                [
+                    "your",
+                    129
+                ],
+                [
+                    "who",
+                    127
+                ],
+                [
+                    "three",
+                    123
+                ],
+                [
+                    "after",
+                    122
+                ],
+                [
+                    "bear",
+                    122
+                ],
+                [
+                    "its",
+                    121
+                ]
+            ],
+            "pos_most_common_lemmas": {
+                "VERB": [
+                    [
+                        "have",
+                        408
+                    ],
+                    [
+                        "say",
+                        381
+                    ],
+                    [
+                        "go",
+                        349
+                    ],
+                    [
+                        "be",
+                        269
+                    ],
+                    [
+                        "get",
+                        256
+                    ],
+                    [
+                        "look",
+                        254
+                    ],
+                    [
+                        "know",
+                        249
+                    ],
+                    [
+                        "come",
+                        231
+                    ],
+                    [
+                        "do",
+                        222
+                    ],
+                    [
+                        "see",
+                        199
+                    ],
+                    [
+                        "take",
+                        170
+                    ],
+                    [
+                        "make",
+                        153
+                    ],
+                    [
+                        "find",
+                        148
+                    ],
+                    [
+                        "walk",
+                        147
+                    ],
+                    [
+                        "think",
+                        142
+                    ],
+                    [
+                        "call",
+                        109
+                    ],
+                    [
+                        "give",
+                        103
+                    ],
+                    [
+                        "leave",
+                        102
+                    ],
+                    [
+                        "want",
+                        96
+                    ],
+                    [
+                        "hike",
+                        96
+                    ],
+                    [
+                        "seem",
+                        94
+                    ],
+                    [
+                        "try",
+                        94
+                    ],
+                    [
+                        "put",
+                        89
+                    ],
+                    [
+                        "tell",
+                        88
+                    ],
+                    [
+                        "feel",
+                        77
+                    ],
+                    [
+                        "fall",
+                        77
+                    ],
+                    [
+                        "ask",
+                        67
+                    ],
+                    [
+                        "lose",
+                        66
+                    ],
+                    [
+                        "sit",
+                        65
+                    ],
+                    [
+                        "stand",
+                        64
+                    ],
+                    [
+                        "turn",
+                        59
+                    ],
+                    [
+                        "eat",
+                        59
+                    ],
+                    [
+                        "set",
+                        58
+                    ],
+                    [
+                        "run",
+                        52
+                    ],
+                    [
+                        "reach",
+                        52
+                    ],
+                    [
+                        "start",
+                        51
+                    ],
+                    [
+                        "pass",
+                        51
+                    ],
+                    [
+                        "stop",
+                        50
+                    ],
+                    [
+                        "let",
+                        48
+                    ],
+                    [
+                        "move",
+                        47
+                    ],
+                    [
+                        "sleep",
+                        47
+                    ],
+                    [
+                        "nod",
+                        47
+                    ],
+                    [
+                        "drive",
+                        47
+                    ],
+                    [
+                        "begin",
+                        46
+                    ],
+                    [
+                        "bring",
+                        46
+                    ],
+                    [
+                        "watch",
+                        46
+                    ],
+                    [
+                        "become",
+                        45
+                    ],
+                    [
+                        "wait",
+                        44
+                    ],
+                    [
+                        "follow",
+                        42
+                    ],
+                    [
+                        "realize",
+                        42
+                    ],
+                    [
+                        "believe",
+                        41
+                    ],
+                    [
+                        "mean",
+                        41
+                    ],
+                    [
+                        "keep",
+                        40
+                    ],
+                    [
+                        "return",
+                        40
+                    ],
+                    [
+                        "name",
+                        40
+                    ],
+                    [
+                        "talk",
+                        38
+                    ],
+                    [
+                        "hear",
+                        38
+                    ],
+                    [
+                        "push",
+                        38
+                    ],
+                    [
+                        "build",
+                        38
+                    ],
+                    [
+                        "die",
+                        37
+                    ],
+                    [
+                        "lie",
+                        34
+                    ],
+                    [
+                        "consider",
+                        34
+                    ],
+                    [
+                        "buy",
+                        33
+                    ],
+                    [
+                        "grow",
+                        33
+                    ],
+                    [
+                        "rise",
+                        32
+                    ],
+                    [
+                        "step",
+                        32
+                    ],
+                    [
+                        "kill",
+                        32
+                    ],
+                    [
+                        "imagine",
+                        32
+                    ],
+                    [
+                        "cross",
+                        32
+                    ],
+                    [
+                        "read",
+                        31
+                    ],
+                    [
+                        "decide",
+                        30
+                    ],
+                    [
+                        "carry",
+                        30
+                    ],
+                    [
+                        "use",
+                        30
+                    ],
+                    [
+                        "hold",
+                        30
+                    ],
+                    [
+                        "fill",
+                        30
+                    ],
+                    [
+                        "spend",
+                        29
+                    ],
+                    [
+                        "happen",
+                        28
+                    ],
+                    [
+                        "live",
+                        27
+                    ],
+                    [
+                        "expect",
+                        27
+                    ],
+                    [
+                        "cover",
+                        27
+                    ],
+                    [
+                        "pack",
+                        26
+                    ],
+                    [
+                        "stare",
+                        26
+                    ],
+                    [
+                        "like",
+                        25
+                    ],
+                    [
+                        "notice",
+                        25
+                    ],
+                    [
+                        "remember",
+                        25
+                    ],
+                    [
+                        "drop",
+                        25
+                    ],
+                    [
+                        "arrive",
+                        24
+                    ],
+                    [
+                        "include",
+                        23
+                    ],
+                    [
+                        "need",
+                        23
+                    ],
+                    [
+                        "end",
+                        23
+                    ],
+                    [
+                        "climb",
+                        23
+                    ],
+                    [
+                        "note",
+                        23
+                    ],
+                    [
+                        "meet",
+                        23
+                    ],
+                    [
+                        "catch",
+                        22
+                    ],
+                    [
+                        "discover",
+                        22
+                    ],
+                    [
+                        "throw",
+                        21
+                    ],
+                    [
+                        "pay",
+                        21
+                    ],
+                    [
+                        "hang",
+                        21
+                    ],
+                    [
+                        "lead",
+                        21
+                    ],
+                    [
+                        "show",
+                        21
+                    ]
+                ],
+                "NOUN": [
+                    [
+                        "trail",
+                        282
+                    ],
+                    [
+                        "mile",
+                        265
+                    ],
+                    [
+                        "day",
+                        265
+                    ],
+                    [
+                        "time",
+                        201
+                    ],
+                    [
+                        "wood",
+                        163
+                    ],
+                    [
+                        "year",
+                        160
+                    ],
+                    [
+                        "tree",
+                        152
+                    ],
+                    [
+                        "people",
+                        146
+                    ],
+                    [
+                        "foot",
+                        141
+                    ],
+                    [
+                        "way",
+                        134
+                    ],
+                    [
+                        "mountain",
+                        118
+                    ],
+                    [
+                        "water",
+                        118
+                    ],
+                    [
+                        "thing",
+                        113
+                    ],
+                    [
+                        "pack",
+                        113
+                    ],
+                    [
+                        "bear",
+                        107
+                    ],
+                    [
+                        "hiker",
+                        104
+                    ],
+                    [
+                        "town",
+                        95
+                    ],
+                    [
+                        "lot",
+                        91
+                    ],
+                    [
+                        "road",
+                        88
+                    ],
+                    [
+                        "minute",
+                        83
+                    ],
+                    [
+                        "hour",
+                        82
+                    ],
+                    [
+                        "place",
+                        80
+                    ],
+                    [
+                        "man",
+                        79
+                    ],
+                    [
+                        "kind",
+                        78
+                    ],
+                    [
+                        "car",
+                        78
+                    ],
+                    [
+                        "night",
+                        76
+                    ],
+                    [
+                        "side",
+                        73
+                    ],
+                    [
+                        "tent",
+                        72
+                    ],
+                    [
+                        "moment",
+                        68
+                    ],
+                    [
+                        "head",
+                        67
+                    ],
+                    [
+                        "world",
+                        65
+                    ],
+                    [
+                        "shelter",
+                        62
+                    ],
+                    [
+                        "park",
+                        62
+                    ],
+                    [
+                        "bag",
+                        61
+                    ],
+                    [
+                        "forest",
+                        56
+                    ],
+                    [
+                        "hill",
+                        55
+                    ],
+                    [
+                        "snow",
+                        54
+                    ],
+                    [
+                        "map",
+                        51
+                    ],
+                    [
+                        "room",
+                        51
+                    ],
+                    [
+                        "part",
+                        50
+                    ],
+                    [
+                        "state",
+                        49
+                    ],
+                    [
+                        "life",
+                        49
+                    ],
+                    [
+                        "couple",
+                        49
+                    ],
+                    [
+                        "air",
+                        49
+                    ],
+                    [
+                        "guy",
+                        48
+                    ],
+                    [
+                        "hand",
+                        48
+                    ],
+                    [
+                        "course",
+                        48
+                    ],
+                    [
+                        "morning",
+                        48
+                    ],
+                    [
+                        "end",
+                        47
+                    ],
+                    [
+                        "fact",
+                        47
+                    ],
+                    [
+                        "week",
+                        46
+                    ],
+                    [
+                        "ground",
+                        46
+                    ],
+                    [
+                        "one",
+                        46
+                    ],
+                    [
+                        "wilderness",
+                        44
+                    ],
+                    [
+                        "number",
+                        44
+                    ],
+                    [
+                        "weather",
+                        43
+                    ],
+                    [
+                        "point",
+                        43
+                    ],
+                    [
+                        "book",
+                        41
+                    ],
+                    [
+                        "summit",
+                        41
+                    ],
+                    [
+                        "hiking",
+                        40
+                    ],
+                    [
+                        "food",
+                        40
+                    ],
+                    [
+                        "today",
+                        39
+                    ],
+                    [
+                        "view",
+                        38
+                    ],
+                    [
+                        "hike",
+                        37
+                    ],
+                    [
+                        "eye",
+                        37
+                    ],
+                    [
+                        "woman",
+                        37
+                    ],
+                    [
+                        "percent",
+                        37
+                    ],
+                    [
+                        "wind",
+                        37
+                    ],
+                    [
+                        "yard",
+                        37
+                    ],
+                    [
+                        "month",
+                        35
+                    ],
+                    [
+                        "rock",
+                        35
+                    ],
+                    [
+                        "ice",
+                        35
+                    ],
+                    [
+                        "friend",
+                        34
+                    ],
+                    [
+                        "bottle",
+                        34
+                    ],
+                    [
+                        "highway",
+                        34
+                    ],
+                    [
+                        "path",
+                        33
+                    ],
+                    [
+                        "name",
+                        33
+                    ],
+                    [
+                        "area",
+                        33
+                    ],
+                    [
+                        "edge",
+                        32
+                    ],
+                    [
+                        "look",
+                        32
+                    ],
+                    [
+                        "idea",
+                        32
+                    ],
+                    [
+                        "door",
+                        31
+                    ],
+                    [
+                        "noise",
+                        31
+                    ],
+                    [
+                        "dinner",
+                        31
+                    ],
+                    [
+                        "century",
+                        31
+                    ],
+                    [
+                        "distance",
+                        30
+                    ],
+                    [
+                        "afternoon",
+                        30
+                    ],
+                    [
+                        "half",
+                        30
+                    ],
+                    [
+                        "motel",
+                        30
+                    ],
+                    [
+                        "home",
+                        29
+                    ],
+                    [
+                        "clothe",
+                        29
+                    ],
+                    [
+                        "camp",
+                        29
+                    ],
+                    [
+                        "top",
+                        29
+                    ],
+                    [
+                        "fire",
+                        28
+                    ],
+                    [
+                        "wall",
+                        28
+                    ],
+                    [
+                        "inch",
+                        28
+                    ],
+                    [
+                        "summer",
+                        28
+                    ],
+                    [
+                        "house",
+                        28
+                    ],
+                    [
+                        "rain",
+                        27
+                    ],
+                    [
+                        "valley",
+                        27
+                    ]
+                ],
+                "PRONOUN": [
+                    [
+                        "i",
+                        2283
+                    ],
+                    [
+                        "it",
+                        1463
+                    ],
+                    [
+                        "he",
+                        972
+                    ],
+                    [
+                        "you",
+                        893
+                    ],
+                    [
+                        "we",
+                        832
+                    ],
+                    [
+                        "they",
+                        428
+                    ],
+                    [
+                        "that",
+                        415
+                    ],
+                    [
+                        "my",
+                        383
+                    ],
+                    [
+                        "his",
+                        345
+                    ],
+                    [
+                        "there",
+                        337
+                    ],
+                    [
+                        "what",
+                        250
+                    ],
+                    [
+                        "she",
+                        217
+                    ],
+                    [
+                        "this",
+                        207
+                    ],
+                    [
+                        "which",
+                        194
+                    ],
+                    [
+                        "our",
+                        163
+                    ],
+                    [
+                        "their",
+                        133
+                    ],
+                    [
+                        "all",
+                        129
+                    ],
+                    [
+                        "who",
+                        127
+                    ],
+                    [
+                        "your",
+                        127
+                    ],
+                    [
+                        "its",
+                        121
+                    ],
+                    [
+                        "something",
+                        83
+                    ],
+                    [
+                        "her",
+                        70
+                    ],
+                    [
+                        "nothing",
+                        67
+                    ],
+                    [
+                        "anything",
+                        64
+                    ],
+                    [
+                        "everything",
+                        32
+                    ],
+                    [
+                        "myself",
+                        31
+                    ],
+                    [
+                        "anyone",
+                        25
+                    ],
+                    [
+                        "ourselves",
+                        23
+                    ],
+                    [
+                        "himself",
+                        20
+                    ],
+                    [
+                        "both",
+                        20
+                    ],
+                    [
+                        "everyone",
+                        19
+                    ],
+                    [
+                        "some",
+                        19
+                    ],
+                    [
+                        "these",
+                        18
+                    ],
+                    [
+                        "someone",
+                        18
+                    ],
+                    [
+                        "themselves",
+                        17
+                    ],
+                    [
+                        "each",
+                        16
+                    ],
+                    [
+                        "no",
+                        15
+                    ],
+                    [
+                        "whatever",
+                        15
+                    ],
+                    [
+                        "those",
+                        14
+                    ],
+                    [
+                        "itself",
+                        13
+                    ],
+                    [
+                        "any",
+                        12
+                    ],
+                    [
+                        "yourself",
+                        12
+                    ],
+                    [
+                        "another",
+                        10
+                    ],
+                    [
+                        "one",
+                        10
+                    ],
+                    [
+                        "a",
+                        10
+                    ],
+                    [
+                        "every",
+                        9
+                    ],
+                    [
+                        "the",
+                        8
+                    ],
+                    [
+                        "anybody",
+                        7
+                    ],
+                    [
+                        "somebody",
+                        7
+                    ],
+                    [
+                        "an",
+                        7
+                    ],
+                    [
+                        "whom",
+                        5
+                    ],
+                    [
+                        "nobody",
+                        4
+                    ],
+                    [
+                        "herself",
+                        4
+                    ],
+                    [
+                        "ya",
+                        4
+                    ],
+                    [
+                        "neither",
+                        3
+                    ],
+                    [
+                        "everybody",
+                        2
+                    ],
+                    [
+                        "oneself",
+                        2
+                    ],
+                    [
+                        "contour",
+                        2
+                    ],
+                    [
+                        "ours",
+                        1
+                    ],
+                    [
+                        "mine",
+                        1
+                    ],
+                    [
+                        "either",
+                        1
+                    ]
+                ],
+                "ADVERB": [
+                    [
+                        "so",
+                        321
+                    ],
+                    [
+                        "then",
+                        268
+                    ],
+                    [
+                        "just",
+                        259
+                    ],
+                    [
+                        "back",
+                        160
+                    ],
+                    [
+                        "now",
+                        157
+                    ],
+                    [
+                        "even",
+                        157
+                    ],
+                    [
+                        "here",
+                        130
+                    ],
+                    [
+                        "there",
+                        129
+                    ],
+                    [
+                        "more",
+                        126
+                    ],
+                    [
+                        "never",
+                        121
+                    ],
+                    [
+                        "very",
+                        112
+                    ],
+                    [
+                        "still",
+                        110
+                    ],
+                    [
+                        "again",
+                        99
+                    ],
+                    [
+                        "too",
+                        94
+                    ],
+                    [
+                        "far",
+                        93
+                    ],
+                    [
+                        "only",
+                        91
+                    ],
+                    [
+                        "almost",
+                        83
+                    ],
+                    [
+                        "about",
+                        79
+                    ],
+                    [
+                        "all",
+                        78
+                    ],
+                    [
+                        "really",
+                        76
+                    ],
+                    [
+                        "as",
+                        71
+                    ],
+                    [
+                        "perhaps",
+                        65
+                    ],
+                    [
+                        "well",
+                        65
+                    ],
+                    [
+                        "later",
+                        58
+                    ],
+                    [
+                        "away",
+                        58
+                    ],
+                    [
+                        "ever",
+                        57
+                    ],
+                    [
+                        "much",
+                        57
+                    ],
+                    [
+                        "nearly",
+                        56
+                    ],
+                    [
+                        "always",
+                        56
+                    ],
+                    [
+                        "quite",
+                        52
+                    ],
+                    [
+                        "most",
+                        51
+                    ],
+                    [
+                        "long",
+                        50
+                    ],
+                    [
+                        "actually",
+                        48
+                    ],
+                    [
+                        "out",
+                        47
+                    ],
+                    [
+                        "once",
+                        45
+                    ],
+                    [
+                        "up",
+                        45
+                    ],
+                    [
+                        "on",
+                        43
+                    ],
+                    [
+                        "at",
+                        41
+                    ],
+                    [
+                        "also",
+                        40
+                    ],
+                    [
+                        "often",
+                        39
+                    ],
+                    [
+                        "of",
+                        39
+                    ],
+                    [
+                        "already",
+                        36
+                    ],
+                    [
+                        "before",
+                        36
+                    ],
+                    [
+                        "around",
+                        33
+                    ],
+                    [
+                        "sometimes",
+                        32
+                    ],
+                    [
+                        "else",
+                        31
+                    ],
+                    [
+                        "in",
+                        30
+                    ],
+                    [
+                        "home",
+                        30
+                    ],
+                    [
+                        "ago",
+                        29
+                    ],
+                    [
+                        "down",
+                        29
+                    ],
+                    [
+                        "clearly",
+                        28
+                    ],
+                    [
+                        "exactly",
+                        28
+                    ],
+                    [
+                        "anywhere",
+                        27
+                    ],
+                    [
+                        "enough",
+                        26
+                    ],
+                    [
+                        "certainly",
+                        26
+                    ],
+                    [
+                        "rather",
+                        26
+                    ],
+                    [
+                        "finally",
+                        25
+                    ],
+                    [
+                        "mostly",
+                        25
+                    ],
+                    [
+                        "pretty",
+                        25
+                    ],
+                    [
+                        "maybe",
+                        25
+                    ],
+                    [
+                        "entirely",
+                        24
+                    ],
+                    [
+                        "everywhere",
+                        24
+                    ],
+                    [
+                        "probably",
+                        24
+                    ],
+                    [
+                        "real",
+                        24
+                    ],
+                    [
+                        "over",
+                        23
+                    ],
+                    [
+                        "suddenly",
+                        23
+                    ],
+                    [
+                        "indeed",
+                        23
+                    ],
+                    [
+                        "together",
+                        22
+                    ],
+                    [
+                        "hard",
+                        22
+                    ],
+                    [
+                        "hardly",
+                        21
+                    ],
+                    [
+                        "particularly",
+                        21
+                    ],
+                    [
+                        "nowhere",
+                        21
+                    ],
+                    [
+                        "soon",
+                        20
+                    ],
+                    [
+                        "possibly",
+                        20
+                    ],
+                    [
+                        "slowly",
+                        20
+                    ],
+                    [
+                        "kind",
+                        20
+                    ],
+                    [
+                        "anyway",
+                        19
+                    ],
+                    [
+                        "you",
+                        19
+                    ],
+                    [
+                        "however",
+                        19
+                    ],
+                    [
+                        "early",
+                        19
+                    ],
+                    [
+                        "forever",
+                        19
+                    ],
+                    [
+                        "right",
+                        18
+                    ],
+                    [
+                        "first",
+                        18
+                    ],
+                    [
+                        "eventually",
+                        18
+                    ],
+                    [
+                        "less",
+                        17
+                    ],
+                    [
+                        "altogether",
+                        17
+                    ],
+                    [
+                        "forward",
+                        17
+                    ],
+                    [
+                        "off",
+                        17
+                    ],
+                    [
+                        "ahead",
+                        16
+                    ],
+                    [
+                        "course",
+                        16
+                    ],
+                    [
+                        "heavily",
+                        16
+                    ],
+                    [
+                        "no",
+                        15
+                    ],
+                    [
+                        "generally",
+                        15
+                    ],
+                    [
+                        "outside",
+                        15
+                    ],
+                    [
+                        "alone",
+                        15
+                    ],
+                    [
+                        "yet",
+                        15
+                    ],
+                    [
+                        "deeply",
+                        15
+                    ],
+                    [
+                        "slightly",
+                        15
+                    ],
+                    [
+                        "somehow",
+                        15
+                    ],
+                    [
+                        "abruptly",
+                        14
+                    ]
+                ],
+                "ADJECTIVE": [
+                    [
+                        "little",
+                        146
+                    ],
+                    [
+                        "other",
+                        143
+                    ],
+                    [
+                        "long",
+                        113
+                    ],
+                    [
+                        "more",
+                        107
+                    ],
+                    [
+                        "good",
+                        94
+                    ],
+                    [
+                        "small",
+                        86
+                    ],
+                    [
+                        "big",
+                        86
+                    ],
+                    [
+                        "first",
+                        83
+                    ],
+                    [
+                        "old",
+                        72
+                    ],
+                    [
+                        "few",
+                        67
+                    ],
+                    [
+                        "high",
+                        66
+                    ],
+                    [
+                        "last",
+                        63
+                    ],
+                    [
+                        "much",
+                        59
+                    ],
+                    [
+                        "appalachian",
+                        53
+                    ],
+                    [
+                        "large",
+                        53
+                    ],
+                    [
+                        "least",
+                        52
+                    ],
+                    [
+                        "great",
+                        51
+                    ],
+                    [
+                        "next",
+                        50
+                    ],
+                    [
+                        "many",
+                        47
+                    ],
+                    [
+                        "most",
+                        47
+                    ],
+                    [
+                        "new",
+                        44
+                    ],
+                    [
+                        "bad",
+                        44
+                    ],
+                    [
+                        "same",
+                        41
+                    ],
+                    [
+                        "full",
+                        40
+                    ],
+                    [
+                        "low",
+                        40
+                    ],
+                    [
+                        "right",
+                        40
+                    ],
+                    [
+                        "hot",
+                        38
+                    ],
+                    [
+                        "own",
+                        38
+                    ],
+                    [
+                        "open",
+                        36
+                    ],
+                    [
+                        "american",
+                        34
+                    ],
+                    [
+                        "several",
+                        33
+                    ],
+                    [
+                        "black",
+                        33
+                    ],
+                    [
+                        "whole",
+                        32
+                    ],
+                    [
+                        "hard",
+                        32
+                    ],
+                    [
+                        "happy",
+                        31
+                    ],
+                    [
+                        "well",
+                        31
+                    ],
+                    [
+                        "steep",
+                        31
+                    ],
+                    [
+                        "young",
+                        30
+                    ],
+                    [
+                        "nice",
+                        30
+                    ],
+                    [
+                        "deep",
+                        29
+                    ],
+                    [
+                        "cold",
+                        28
+                    ],
+                    [
+                        "eastern",
+                        27
+                    ],
+                    [
+                        "real",
+                        26
+                    ],
+                    [
+                        "white",
+                        24
+                    ],
+                    [
+                        "sure",
+                        23
+                    ],
+                    [
+                        "short",
+                        23
+                    ],
+                    [
+                        "early",
+                        23
+                    ],
+                    [
+                        "certain",
+                        23
+                    ],
+                    [
+                        "dark",
+                        23
+                    ],
+                    [
+                        "single",
+                        22
+                    ],
+                    [
+                        "less",
+                        21
+                    ],
+                    [
+                        "clear",
+                        21
+                    ],
+                    [
+                        "southern",
+                        21
+                    ],
+                    [
+                        "private",
+                        21
+                    ],
+                    [
+                        "heavy",
+                        21
+                    ],
+                    [
+                        "late",
+                        20
+                    ],
+                    [
+                        "famous",
+                        20
+                    ],
+                    [
+                        "dead",
+                        20
+                    ],
+                    [
+                        "warm",
+                        20
+                    ],
+                    [
+                        "sudden",
+                        19
+                    ],
+                    [
+                        "tired",
+                        19
+                    ],
+                    [
+                        "wild",
+                        18
+                    ],
+                    [
+                        "northern",
+                        18
+                    ],
+                    [
+                        "wrong",
+                        18
+                    ],
+                    [
+                        "sized",
+                        17
+                    ],
+                    [
+                        "tiny",
+                        17
+                    ],
+                    [
+                        "easy",
+                        17
+                    ],
+                    [
+                        "green",
+                        17
+                    ],
+                    [
+                        "busy",
+                        17
+                    ],
+                    [
+                        "distant",
+                        16
+                    ],
+                    [
+                        "central",
+                        16
+                    ],
+                    [
+                        "third",
+                        16
+                    ],
+                    [
+                        "empty",
+                        16
+                    ],
+                    [
+                        "square",
+                        16
+                    ],
+                    [
+                        "national",
+                        16
+                    ],
+                    [
+                        "possible",
+                        15
+                    ],
+                    [
+                        "different",
+                        15
+                    ],
+                    [
+                        "near",
+                        15
+                    ],
+                    [
+                        "modest",
+                        15
+                    ],
+                    [
+                        "strange",
+                        15
+                    ],
+                    [
+                        "broad",
+                        15
+                    ],
+                    [
+                        "remote",
+                        14
+                    ],
+                    [
+                        "sunny",
+                        14
+                    ],
+                    [
+                        "enough",
+                        14
+                    ],
+                    [
+                        "only",
+                        14
+                    ],
+                    [
+                        "blue",
+                        14
+                    ],
+                    [
+                        "endless",
+                        14
+                    ],
+                    [
+                        "fresh",
+                        14
+                    ],
+                    [
+                        "perfect",
+                        14
+                    ],
+                    [
+                        "considerable",
+                        14
+                    ],
+                    [
+                        "able",
+                        13
+                    ],
+                    [
+                        "rich",
+                        13
+                    ],
+                    [
+                        "red",
+                        13
+                    ],
+                    [
+                        "particular",
+                        13
+                    ],
+                    [
+                        "odd",
+                        13
+                    ],
+                    [
+                        "quiet",
+                        13
+                    ],
+                    [
+                        "dry",
+                        13
+                    ],
+                    [
+                        "grassy",
+                        13
+                    ],
+                    [
+                        "wonderful",
+                        13
+                    ],
+                    [
+                        "narrow",
+                        13
+                    ]
+                ],
+                "PREPOSITION": [
+                    [
+                        "of",
+                        2369
+                    ],
+                    [
+                        "in",
+                        1706
+                    ],
+                    [
+                        "to",
+                        929
+                    ],
+                    [
+                        "on",
+                        753
+                    ],
+                    [
+                        "with",
+                        736
+                    ],
+                    [
+                        "for",
+                        692
+                    ],
+                    [
+                        "at",
+                        588
+                    ],
+                    [
+                        "from",
+                        403
+                    ],
+                    [
+                        "by",
+                        312
+                    ],
+                    [
+                        "up",
+                        291
+                    ],
+                    [
+                        "into",
+                        235
+                    ],
+                    [
+                        "out",
+                        216
+                    ],
+                    [
+                        "through",
+                        194
+                    ],
+                    [
+                        "over",
+                        171
+                    ],
+                    [
+                        "like",
+                        168
+                    ],
+                    [
+                        "off",
+                        155
+                    ],
+                    [
+                        "as",
+                        150
+                    ],
+                    [
+                        "about",
+                        132
+                    ],
+                    [
+                        "than",
+                        125
+                    ],
+                    [
+                        "down",
+                        120
+                    ],
+                    [
+                        "after",
+                        99
+                    ],
+                    [
+                        "along",
+                        90
+                    ],
+                    [
+                        "without",
+                        65
+                    ],
+                    [
+                        "around",
+                        62
+                    ],
+                    [
+                        "across",
+                        60
+                    ],
+                    [
+                        "between",
+                        54
+                    ],
+                    [
+                        "before",
+                        40
+                    ],
+                    [
+                        "beyond",
+                        39
+                    ],
+                    [
+                        "under",
+                        39
+                    ],
+                    [
+                        "against",
+                        37
+                    ],
+                    [
+                        "above",
+                        29
+                    ],
+                    [
+                        "within",
+                        29
+                    ],
+                    [
+                        "near",
+                        25
+                    ],
+                    [
+                        "beside",
+                        24
+                    ],
+                    [
+                        "towards",
+                        22
+                    ],
+                    [
+                        "until",
+                        18
+                    ],
+                    [
+                        "onto",
+                        18
+                    ],
+                    [
+                        "behind",
+                        17
+                    ],
+                    [
+                        "among",
+                        16
+                    ],
+                    [
+                        "outside",
+                        14
+                    ],
+                    [
+                        "during",
+                        14
+                    ],
+                    [
+                        "below",
+                        11
+                    ],
+                    [
+                        "beneath",
+                        11
+                    ],
+                    [
+                        "past",
+                        9
+                    ],
+                    [
+                        "back",
+                        7
+                    ],
+                    [
+                        "throughout",
+                        6
+                    ],
+                    [
+                        "unlike",
+                        6
+                    ],
+                    [
+                        "per",
+                        5
+                    ],
+                    [
+                        "alongside",
+                        4
+                    ],
+                    [
+                        "away",
+                        4
+                    ],
+                    [
+                        "you",
+                        3
+                    ],
+                    [
+                        "en",
+                        3
+                    ],
+                    [
+                        "inside",
+                        2
+                    ],
+                    [
+                        "underneath",
+                        1
+                    ],
+                    [
+                        "aside",
+                        1
+                    ],
+                    [
+                        "springlike",
+                        1
+                    ],
+                    [
+                        "opposite",
+                        1
+                    ],
+                    [
+                        "lawnlike",
+                        1
+                    ],
+                    [
+                        "via",
+                        1
+                    ],
+                    [
+                        "atop",
+                        1
+                    ]
+                ],
+                "CONJUNCTION": [
+                    [
+                        "and",
+                        3087
+                    ],
+                    [
+                        "but",
+                        594
+                    ],
+                    [
+                        "that",
+                        453
+                    ],
+                    [
+                        "or",
+                        383
+                    ],
+                    [
+                        "if",
+                        271
+                    ],
+                    [
+                        "as",
+                        260
+                    ],
+                    [
+                        "when",
+                        258
+                    ],
+                    [
+                        "where",
+                        152
+                    ],
+                    [
+                        "how",
+                        147
+                    ],
+                    [
+                        "because",
+                        99
+                    ],
+                    [
+                        "since",
+                        51
+                    ],
+                    [
+                        "before",
+                        44
+                    ],
+                    [
+                        "why",
+                        42
+                    ],
+                    [
+                        "though",
+                        42
+                    ],
+                    [
+                        "so",
+                        40
+                    ],
+                    [
+                        "than",
+                        38
+                    ],
+                    [
+                        "while",
+                        35
+                    ],
+                    [
+                        "until",
+                        27
+                    ],
+                    [
+                        "for",
+                        25
+                    ],
+                    [
+                        "till",
+                        15
+                    ],
+                    [
+                        "whether",
+                        13
+                    ],
+                    [
+                        "after",
+                        12
+                    ],
+                    [
+                        "once",
+                        11
+                    ],
+                    [
+                        "like",
+                        10
+                    ],
+                    [
+                        "upon",
+                        9
+                    ],
+                    [
+                        "either",
+                        8
+                    ],
+                    [
+                        "although",
+                        8
+                    ],
+                    [
+                        "except",
+                        7
+                    ],
+                    [
+                        "yet",
+                        6
+                    ],
+                    [
+                        "despite",
+                        5
+                    ],
+                    [
+                        "with",
+                        5
+                    ],
+                    [
+                        "both",
+                        3
+                    ],
+                    [
+                        "whenever",
+                        3
+                    ],
+                    [
+                        "neither",
+                        3
+                    ],
+                    [
+                        "nor",
+                        3
+                    ],
+                    [
+                        "unless",
+                        3
+                    ],
+                    [
+                        "besides",
+                        2
+                    ],
+                    [
+                        "wherever",
+                        2
+                    ],
+                    [
+                        "whereupon",
+                        1
+                    ]
+                ],
+                "INTERJECTION": [
+                    [
+                        "well",
+                        77
+                    ],
+                    [
+                        "oh",
+                        57
+                    ],
+                    [
+                        "yeah",
+                        42
+                    ],
+                    [
+                        "no",
+                        34
+                    ],
+                    [
+                        "hey",
+                        23
+                    ],
+                    [
+                        "yes",
+                        11
+                    ],
+                    [
+                        "please",
+                        9
+                    ],
+                    [
+                        "like",
+                        9
+                    ],
+                    [
+                        "ha",
+                        9
+                    ],
+                    [
+                        "say",
+                        7
+                    ],
+                    [
+                        "ah",
+                        6
+                    ],
+                    [
+                        "ok",
+                        6
+                    ],
+                    [
+                        "shit",
+                        4
+                    ],
+                    [
+                        "jeez",
+                        4
+                    ],
+                    [
+                        "yup",
+                        4
+                    ],
+                    [
+                        "wow",
+                        3
+                    ],
+                    [
+                        "alas",
+                        3
+                    ],
+                    [
+                        "hello",
+                        3
+                    ],
+                    [
+                        "huh",
+                        3
+                    ],
+                    [
+                        "right",
+                        2
+                    ],
+                    [
+                        "hi",
+                        2
+                    ],
+                    [
+                        "anyway",
+                        2
+                    ],
+                    [
+                        "farewell",
+                        2
+                    ],
+                    [
+                        "eh",
+                        1
+                    ],
+                    [
+                        "shhhhh",
+                        1
+                    ],
+                    [
+                        "uh",
+                        1
+                    ],
+                    [
+                        "welcome",
+                        1
+                    ],
+                    [
+                        "elk",
+                        1
+                    ],
+                    [
+                        "sure",
+                        1
+                    ],
+                    [
+                        "whew",
+                        1
+                    ],
+                    [
+                        "bye",
+                        1
+                    ],
+                    [
+                        "goodness",
+                        1
+                    ],
+                    [
+                        "aw",
+                        1
+                    ],
+                    [
+                        "gosh",
+                        1
+                    ]
+                ],
+                "DETERMINER": [
+                    [
+                        "the",
+                        4513
+                    ],
+                    [
+                        "a",
+                        3123
+                    ],
+                    [
+                        "an",
+                        329
+                    ],
+                    [
+                        "no",
+                        168
+                    ],
+                    [
+                        "all",
+                        152
+                    ],
+                    [
+                        "some",
+                        137
+                    ],
+                    [
+                        "this",
+                        133
+                    ],
+                    [
+                        "that",
+                        87
+                    ],
+                    [
+                        "any",
+                        78
+                    ],
+                    [
+                        "every",
+                        76
+                    ],
+                    [
+                        "each",
+                        58
+                    ],
+                    [
+                        "another",
+                        56
+                    ],
+                    [
+                        "these",
+                        48
+                    ],
+                    [
+                        "half",
+                        27
+                    ],
+                    [
+                        "those",
+                        26
+                    ],
+                    [
+                        "such",
+                        19
+                    ],
+                    [
+                        "quite",
+                        16
+                    ],
+                    [
+                        "whose",
+                        10
+                    ],
+                    [
+                        "what",
+                        9
+                    ],
+                    [
+                        "either",
+                        6
+                    ],
+                    [
+                        "which",
+                        5
+                    ],
+                    [
+                        "both",
+                        5
+                    ],
+                    [
+                        "whatever",
+                        5
+                    ],
+                    [
+                        "twice",
+                        3
+                    ],
+                    [
+                        "whichever",
+                        1
+                    ]
+                ]
+            },
+            "most_common_phrasal_verbs": [
+                [
+                    "set off",
+                    36
+                ],
+                [
+                    "go off",
+                    27
+                ],
+                [
+                    "end up",
+                    16
+                ],
+                [
+                    "go on",
+                    16
+                ],
+                [
+                    "come up",
+                    13
+                ],
+                [
+                    "put on",
+                    13
+                ],
+                [
+                    "push on",
+                    13
+                ],
+                [
+                    "get out",
+                    10
+                ],
+                [
+                    "pick up",
+                    10
+                ],
+                [
+                    "look up",
+                    10
+                ],
+                [
+                    "get up",
+                    9
+                ],
+                [
+                    "put up",
+                    9
+                ],
+                [
+                    "take on",
+                    8
+                ],
+                [
+                    "come along",
+                    8
+                ],
+                [
+                    "come out",
+                    8
+                ],
+                [
+                    "give up",
+                    8
+                ],
+                [
+                    "hang up",
+                    7
+                ],
+                [
+                    "put down",
+                    6
+                ],
+                [
+                    "bring in",
+                    6
+                ],
+                [
+                    "go out",
+                    6
+                ],
+                [
+                    "set up",
+                    5
+                ],
+                [
+                    "drop out",
+                    5
+                ],
+                [
+                    "press on",
+                    5
+                ],
+                [
+                    "go up",
+                    5
+                ],
+                [
+                    "spread out",
+                    5
+                ],
+                [
+                    "turn out",
+                    5
+                ],
+                [
+                    "move on",
+                    5
+                ],
+                [
+                    "come on",
+                    5
+                ],
+                [
+                    "take up",
+                    4
+                ],
+                [
+                    "tear off",
+                    4
+                ],
+                [
+                    "catch up",
+                    4
+                ],
+                [
+                    "get in",
+                    4
+                ],
+                [
+                    "get on",
+                    4
+                ],
+                [
+                    "drop off",
+                    4
+                ],
+                [
+                    "run on",
+                    4
+                ],
+                [
+                    "pack up",
+                    4
+                ],
+                [
+                    "walk up",
+                    4
+                ],
+                [
+                    "draw up",
+                    4
+                ],
+                [
+                    "break down",
+                    4
+                ],
+                [
+                    "take off",
+                    4
+                ],
+                [
+                    "sit down",
+                    4
+                ],
+                [
+                    "hold up",
+                    4
+                ],
+                [
+                    "get through",
+                    4
+                ],
+                [
+                    "hang out",
+                    4
+                ],
+                [
+                    "fall down",
+                    4
+                ],
+                [
+                    "wipe out",
+                    4
+                ],
+                [
+                    "figure out",
+                    4
+                ],
+                [
+                    "pull up",
+                    4
+                ],
+                [
+                    "turn around",
+                    4
+                ],
+                [
+                    "lie down",
+                    3
+                ],
+                [
+                    "pile up",
+                    3
+                ],
+                [
+                    "keep out",
+                    3
+                ],
+                [
+                    "spring up",
+                    3
+                ],
+                [
+                    "think through",
+                    3
+                ],
+                [
+                    "start off",
+                    3
+                ],
+                [
+                    "come down",
+                    3
+                ],
+                [
+                    "seek out",
+                    3
+                ],
+                [
+                    "pop out",
+                    3
+                ],
+                [
+                    "throw out",
+                    3
+                ],
+                [
+                    "chop down",
+                    3
+                ],
+                [
+                    "blow out",
+                    3
+                ],
+                [
+                    "line up",
+                    3
+                ],
+                [
+                    "bring out",
+                    3
+                ],
+                [
+                    "look down",
+                    3
+                ],
+                [
+                    "roll up",
+                    3
+                ],
+                [
+                    "leave out",
+                    3
+                ],
+                [
+                    "knock off",
+                    3
+                ],
+                [
+                    "call up",
+                    3
+                ],
+                [
+                    "look over",
+                    3
+                ],
+                [
+                    "put in",
+                    3
+                ],
+                [
+                    "struggle up",
+                    3
+                ],
+                [
+                    "get down",
+                    3
+                ],
+                [
+                    "pass through",
+                    3
+                ],
+                [
+                    "drive off",
+                    3
+                ],
+                [
+                    "go down",
+                    3
+                ],
+                [
+                    "sit around",
+                    2
+                ],
+                [
+                    "make up",
+                    2
+                ],
+                [
+                    "crawl in",
+                    2
+                ],
+                [
+                    "try out",
+                    2
+                ],
+                [
+                    "follow up",
+                    2
+                ],
+                [
+                    "grow up",
+                    2
+                ],
+                [
+                    "settle down",
+                    2
+                ],
+                [
+                    "screw up",
+                    2
+                ],
+                [
+                    "take over",
+                    2
+                ],
+                [
+                    "pay up",
+                    2
+                ],
+                [
+                    "walk out",
+                    2
+                ],
+                [
+                    "check out",
+                    2
+                ],
+                [
+                    "meet up",
+                    2
+                ],
+                [
+                    "trudge off",
+                    2
+                ],
+                [
+                    "trudge up",
+                    2
+                ],
+                [
+                    "straighten up",
+                    2
+                ],
+                [
+                    "breathe out",
+                    2
+                ],
+                [
+                    "begin with",
+                    2
+                ],
+                [
+                    "stretch up",
+                    2
+                ],
+                [
+                    "cut down",
+                    2
+                ],
+                [
+                    "fall over",
+                    2
+                ],
+                [
+                    "look out",
+                    2
+                ],
+                [
+                    "lean over",
+                    2
+                ],
+                [
+                    "trudge on",
+                    2
+                ],
+                [
+                    "wash out",
+                    2
+                ]
+            ]
+        },
+        "grammar": {
+            "positive_sentences_total": 4433,
+            "negative_sentences_total": 1037,
+            "parts_of_speech_count": {
+                "DETERMINER": 9091,
+                "NOUN": 21595,
+                "PREPOSITION": 11337,
+                "ADJECTIVE": 7070,
+                "ADVERB": 6889,
+                "CONJUNCTION": 6181,
+                "PRONOUN": 10758,
+                "VERB": 12117,
+                "INTERJECTION": 333
+            },
+            "phrasal_verbs_count": 819,
+            "verb_tense_simple_present_count": 756,
+            "verb_tense_present_continuous_count": 58,
+            "verb_tense_present_perfect_count": 165,
+            "verb_tense_present_perfect_continuous_count": 15,
+            "verb_tense_simple_past_count": 3670,
+            "verb_tense_past_continuous_count": 256,
+            "verb_tense_past_perfect_count": 362,
+            "verb_tense_past_perfect_continuous_count": 14,
+            "verb_tense_simple_future_count": 58,
+            "verb_tense_future_continuous_count": 4,
+            "verb_tense_future_perfect_count": 2,
+            "verb_tense_future_perfect_continuous_count": 0,
+            "punctuations_count": {
+                ".": 5036,
+                ",": 6532,
+                "'": 81,
+                "--": 644,
+                "\"": 2287,
+                "?": 423,
+                ":": 80,
+                "!": 61,
+                "(": 163,
+                ")": 162,
+                "-": 544,
+                ";": 78,
+                "/": 6,
+                "{": 1,
+                "\u2022": 2,
+                "''": 3,
+                "...": 4,
+                "[": 2,
+                "]": 2
+            }
+        },
+        "tone": {
+            "passive_voice_count": 247,
+            "active_voice_count": 5236,
+            "intensifiers_count": 868,
+            "intensifiers": {
+                "2,100": 1,
+                "quite": 4,
+                "would": 1,
+                "so": 24,
+                "long": 1,
+                "on": 11,
+                "be": 27,
+                "to": 20,
+                "bit": 1,
+                "lot": 1,
+                "we": 16,
+                "ounce": 1,
+                "very": 14,
+                "and": 21,
+                "'ll": 1,
+                "you": 7,
+                "Dave": 4,
+                "he": 12,
+                "sleep": 4,
+                "oh": 3,
+                "explain": 3,
+                "thing": 2,
+                "your": 2,
+                "tie": 3,
+                "come": 3,
+                ", to": 1,
+                "strap": 1,
+                "bag and": 1,
+                "know": 2,
+                "lash": 1,
+                "down": 1,
+                "not": 9,
+                "somewhat": 1,
+                "the": 31,
+                "opening": 1,
+                "towards": 2,
+                "one mile": 1,
+                "from": 4,
+                ". just": 1,
+                "mile": 3,
+                "all": 2,
+                "off": 9,
+                "distant": 10,
+                "deal": 6,
+                "go": 11,
+                "with": 9,
+                "watch": 4,
+                "she": 11,
+                "something": 2,
+                "Katz": 5,
+                "customer": 4,
+                "Katz watch": 1,
+                "paternal": 4,
+                "say": 5,
+                "pride": 2,
+                "incongruous": 1,
+                "ugly": 1,
+                "like": 3,
+                "at all": 1,
+                "\"actually": 2,
+                "charge": 10,
+                "do": 13,
+                "consider": 7,
+                "kind": 5,
+                "actually": 7,
+                "leave": 2,
+                "her": 2,
+                "ditch": 3,
+                "benot": 1,
+                "this": 1,
+                "actually,": 1,
+                "when": 1,
+                "--": 2,
+                "waitress": 2,
+                "Betty": 1,
+                "stare": 1,
+                "us": 3,
+                "look": 4,
+                "be a": 1,
+                "cafe": 1,
+                "4,000": 1,
+                "his": 2,
+                "tell": 2,
+                "pretty": 3,
+                "century": 2,
+                "Peter": 1,
+                "Bartram": 1,
+                "five": 1,
+                "considerable": 1,
+                "manage": 1,
+                "joy": 1,
+                "Nuttall": 1,
+                "acre": 1,
+                "remarkably": 1,
+                "cambium": 1,
+                "manufacture": 1,
+                "which": 1,
+                "every": 1,
+                "pass": 1,
+                "evening": 2,
+                "privately": 2,
+                "but": 2,
+                "it be": 2,
+                "now": 1,
+                "Jesus": 2,
+                "hallucinate": 1,
+                "lane": 1,
+                "at": 1,
+                "ha": 4,
+                "clean": 1,
+                "forget": 1,
+                "catch": 4,
+                "600": 1,
+                "type": 2,
+                "More": 1,
+                "pound": 1,
+                "about": 4,
+                "you?": 2,
+                "particularly": 5,
+                "Myron": 1,
+                "virtually": 1,
+                "Appalachian": 2,
+                "early": 1,
+                "of": 6,
+                "too": 6,
+                "people": 1,
+                "than": 1,
+                "shelter": 1,
+                "in": 12,
+                "reason": 2,
+                "Bill": 1,
+                "why": 1,
+                "way": 2,
+                "patient": 1,
+                "England": 2,
+                "real": 5,
+                "ready": 1,
+                "different": 1,
+                "May": 1,
+                "May,": 1,
+                "Moosilauke": 1,
+                "one": 1,
+                "dirt parking": 1,
+                "least": 1,
+                "interesting": 1,
+                "place": 2,
+                "Park": 1,
+                "low": 1,
+                "slave": 1,
+                "Jackson": 2,
+                "Stonewall": 1,
+                "name": 1,
+                "hike": 1,
+                "awful": 1,
+                "such": 1,
+                "sympathetic grimace": 1,
+                "'s": 1,
+                "part": 1,
+                "drive to": 1,
+                "bad": 2,
+                "all now": 1,
+                "through": 1,
+                "Piney": 1,
+                "AT": 1,
+                "rather": 3,
+                "kill": 1,
+                "intentionally": 1,
+                "have read": 1,
+                "supremely": 1,
+                "quit": 1,
+                "out": 2,
+                "there": 3,
+                "conception": 1,
+                "but devise": 1,
+                "everywhere": 1,
+                "also": 1,
+                "up": 2,
+                "gravely": 1,
+                "they": 2,
+                "hardbound history": 1,
+                "prepare": 1,
+                "have": 7,
+                "that": 1,
+                "there,": 1,
+                "continent": 1,
+                "illustration": 1,
+                "wear away": 1,
+                "permit": 1,
+                "rock": 1,
+                "New": 1,
+                "nearly": 1,
+                "fuel": 1,
+                "sheet": 1,
+                "Springs": 1,
+                "step": 1,
+                "Engineers": 1,
+                "swear": 1,
+                "time": 6,
+                "it": 8,
+                "Massachusetts": 1,
+                "some": 3,
+                "hiking": 5,
+                "do some": 1,
+                "walk": 3,
+                "Hills": 3,
+                "1983": 3,
+                "little": 1,
+                "Appalachian Trail": 1,
+                "cross": 1,
+                "again": 1,
+                "Berkshire": 3,
+                "just": 3,
+                "man": 1,
+                "path": 1,
+                "turn": 2,
+                "expression": 1,
+                "grave": 2,
+                "want": 2,
+                "\"do": 1,
+                "certain": 2,
+                "nothing": 1,
+                "ever": 1,
+                "surface": 1,
+                "Pagliuca": 1,
+                "speed": 1,
+                "brilliant": 5,
+                "'ve": 4,
+                "yeah": 1,
+                "Hanover": 1,
+                "idea": 2,
+                "be two": 1,
+                "house": 2,
+                "living": 2,
+                "room": 1,
+                "more": 1,
+                "fern": 1,
+                "trail": 1,
+                "wall": 1,
+                "my": 1,
+                "for": 1,
+                "climb to": 1,
+                "slow": 1,
+                "Mountain": 1,
+                "thank": 1,
+                "minute": 1,
+                "by": 3,
+                "course": 1,
+                "disappear": 2,
+                "die": 1,
+                "loon": 1,
+                "lake": 1,
+                "rain": 1,
+                "night": 1,
+                "must": 2,
+                "fraught": 1,
+                "blood": 1,
+                "porch": 1,
+                "wood": 1
+            },
+            "connector_categories": {
+                "cause & effect": 2649,
+                "addition": 4032,
+                "comparison": 309,
+                "contrast": 165,
+                "conclusion": 43,
+                "persuasion": 310,
+                "time": 350,
+                "sequencing": 338,
+                "emphasis": 144,
+                "order of importance": 17,
+                "opinion": 29,
+                "illustration": 29,
+                "focusing & linking": 19
+            },
+            "connectors": {
+                "so": 1259,
+                "and": 3540,
+                "for": 1205,
+                "like": 252,
+                "nonetheless": 2,
+                "evidently": 28,
+                "clearly": 28,
+                "then": 536,
+                "later": 60,
+                "again": 272,
+                "last": 98,
+                "comes from": 1,
+                "certainly": 28,
+                "first": 105,
+                "since": 65,
+                "finally": 75,
+                "while": 59,
+                "on the other hand": 7,
+                "particularly": 21,
+                "of course": 58,
+                "above all": 11,
+                "because": 99,
+                "i think": 19,
+                "further": 5,
+                "thus": 12,
+                "causes": 4,
+                "as with": 4,
+                "also": 120,
+                "however": 19,
+                "yet": 32,
+                "even so": 10,
+                "indeed": 46,
+                "decidedly": 6,
+                "such as": 4,
+                "notably": 3,
+                "in particular": 4,
+                "actually": 48,
+                "to begin with": 5,
+                "second": 20,
+                "third": 26,
+                "as for": 14,
+                "afterwards": 8,
+                "in fact": 31,
+                "essentially": 5,
+                "alternatively": 1,
+                "apart from": 3,
+                "in any case": 12,
+                "surely": 5,
+                "besides": 36,
+                "for one thing": 6,
+                "moreover": 8,
+                "additionally": 1,
+                "i believe": 9,
+                "truly": 9,
+                "regarding": 3,
+                "with regard to": 1,
+                "at first": 4,
+                "equally": 2,
+                "likewise": 4,
+                "in comparison": 1,
+                "in contrast": 2,
+                "even though": 5,
+                "instead": 11,
+                "that is": 17,
+                "meanwhile": 9,
+                "although": 8,
+                "i feel": 1,
+                "as a matter of fact": 4,
+                "in the case of": 1,
+                "significantly": 1,
+                "overall": 3,
+                "hence": 1,
+                "not only \u2026 but also": 1,
+                "owing to": 1,
+                "for example": 1,
+                "on the whole": 1,
+                "for instance": 1,
+                "an instance": 1,
+                "primarily": 1,
+                "in the meantime": 1,
+                "consequently": 1,
+                "stems from": 1,
+                "that is to say": 1,
+                "as far as \u2026 concerned": 1
+            },
+            "contractions": {
+                "let's (= let us)": 10,
+                "I've (= I have)": 19,
+                "you're (= you are)": 35,
+                "I'll (= I will)": 17,
+                "didn't (= did not)": 126,
+                "hadn't (= had not)": 28,
+                "doesn't (= does not)": 14,
+                "you'll (= you will)": 5,
+                "there's (= there is)": 22,
+                "couldn't (= could not)": 57,
+                "wouldn't (= would not)": 25,
+                "you've (= you have)": 15,
+                "don't (= do not)": 95,
+                "that's (= that is)": 47,
+                "aren't (= are not)": 4,
+                "won't (= will not)": 10,
+                "can't (= can not)": 37,
+                "we'd (= we would)": 4,
+                "haven't (= have not)": 12,
+                "we're (= we are)": 17,
+                "I'm (= I am)": 55,
+                "he's (= he is)": 7,
+                "he'd (= he would)": 1,
+                "they'd (= they would)": 4,
+                "you'd (= you would)": 2,
+                "she'd (= she would)": 1,
+                "they're (= they are)": 5,
+                "isn't (= is not)": 9,
+                "she's (= she is)": 3,
+                "we've (= we have)": 8,
+                "what's (= what is)": 6,
+                "I'd (= I would)": 20,
+                "what're (= what are)": 5,
+                "who's (= who is)": 2,
+                "she'll (= she will)": 2,
+                "weren't (= were not)": 4,
+                "where's (= where is)": 5,
+                "hasn't (= has not)": 2,
+                "they've (= they have)": 1,
+                "shouldn't (= should not)": 1,
+                "he'll (= he will)": 1
+            },
+            "noun_chunk_words_percentiles": {
+                "p25": 1.0,
+                "p50": 1.0,
+                "p75": 2.0,
+                "p90": 3.0,
+                "p95": 4.0,
+                "p99": 5.0,
+                "std": 0.9608750654650656,
+                "count": 26010,
+                "average": 1.7599769319492502
+            },
+            "noun_chunk_words_buckets": [
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 9,
+                    "count": 26008
+                }
+            ],
+            "head_distance_percentiles": {
+                "p25": 1.0,
+                "p50": 2.0,
+                "p75": 3.0,
+                "p90": 5.0,
+                "p95": 9.0,
+                "p99": 20.0,
+                "std": 3.796363318191843,
+                "count": 89661,
+                "average": 2.702958923054617
+            },
+            "head_distance_buckets": [
+                {
+                    "start": 1,
+                    "end": 13,
+                    "count": 87320
+                },
+                {
+                    "start": 13,
+                    "end": 25,
+                    "count": 1832
+                },
+                {
+                    "start": 25,
+                    "end": 37,
+                    "count": 375
+                },
+                {
+                    "start": 37,
+                    "end": 49,
+                    "count": 91
+                },
+                {
+                    "start": 49,
+                    "end": 61,
+                    "count": 32
+                },
+                {
+                    "start": 61,
+                    "end": 73,
+                    "count": 6
+                },
+                {
+                    "start": 73,
+                    "end": 85,
+                    "count": 2
+                },
+                {
+                    "start": 85,
+                    "end": 97,
+                    "count": 2
+                },
+                {
+                    "start": 97,
+                    "end": 109,
+                    "count": 0
+                },
+                {
+                    "start": 109,
+                    "end": 124,
+                    "count": 0
+                }
+            ]
+        },
+        "readability": {
+            "flesch_kincaid_grade_level_percentiles": {
+                "p25": 7.278218718692157,
+                "p50": 7.324933875625899,
+                "p75": 7.672122287839644,
+                "p90": 7.88043533516789,
+                "p95": 7.949873017610639,
+                "p99": 8.005423163564839,
+                "std": 0.35143017087323114,
+                "count": 3,
+                "average": 7.525249379145901
+            },
+            "flesch_kincaid_grade_level_buckets": [
+                {
+                    "start": 0,
+                    "end": 1,
+                    "count": 0
+                },
+                {
+                    "start": 1,
+                    "end": 2,
+                    "count": 0
+                },
+                {
+                    "start": 2,
+                    "end": 3,
+                    "count": 0
+                },
+                {
+                    "start": 3,
+                    "end": 4,
+                    "count": 0
+                },
+                {
+                    "start": 4,
+                    "end": 5,
+                    "count": 0
+                },
+                {
+                    "start": 5,
+                    "end": 6,
+                    "count": 0
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "count": 0
+                },
+                {
+                    "start": 7,
+                    "end": 8,
+                    "count": 2
+                },
+                {
+                    "start": 8,
+                    "end": 9,
+                    "count": 1
+                },
+                {
+                    "start": 9,
+                    "end": 10,
+                    "count": 0
+                },
+                {
+                    "start": 10,
+                    "end": 11,
+                    "count": 0
+                },
+                {
+                    "start": 11,
+                    "end": 12,
+                    "count": 0
+                },
+                {
+                    "start": 12,
+                    "end": 13,
+                    "count": 0
+                },
+                {
+                    "start": 13,
+                    "end": 14,
+                    "count": 0
+                },
+                {
+                    "start": 14,
+                    "end": 15,
+                    "count": 0
+                },
+                {
+                    "start": 15,
+                    "end": 16,
+                    "count": 0
+                },
+                {
+                    "start": 16,
+                    "end": 17,
+                    "count": 0
+                },
+                {
+                    "start": 17,
+                    "end": 18,
+                    "count": 0
+                }
+            ],
+            "flesch_kincaid_reading_ease_percentiles": {
+                "p25": 71.37832569825817,
+                "p50": 72.34492127725764,
+                "p75": 72.40952999845081,
+                "p90": 72.44829523116672,
+                "p95": 72.46121697540535,
+                "p99": 72.47155437079626,
+                "std": 0.9432481961419523,
+                "count": 3,
+                "average": 71.74359670538676
+            },
+            "flesch_kincaid_reading_ease_buckets": [
+                {
+                    "start": 0,
+                    "end": 10,
+                    "count": 0
+                },
+                {
+                    "start": 10,
+                    "end": 30,
+                    "count": 0
+                },
+                {
+                    "start": 30,
+                    "end": 50,
+                    "count": 0
+                },
+                {
+                    "start": 50,
+                    "end": 60,
+                    "count": 0
+                },
+                {
+                    "start": 60,
+                    "end": 70,
+                    "count": 0
+                },
+                {
+                    "start": 70,
+                    "end": 80,
+                    "count": 3
+                },
+                {
+                    "start": 80,
+                    "end": 90,
+                    "count": 0
+                },
+                {
+                    "start": 90,
+                    "end": 100,
+                    "count": 0
+                }
+            ],
+            "dale_chall_percentiles": {
+                "p25": 7.570745652109695,
+                "p50": 7.586784705652444,
+                "p75": 7.6027197305356164,
+                "p90": 7.61228074546552,
+                "p95": 7.6154677504421535,
+                "p99": 7.618017354423461,
+                "std": 0.02610677177167721,
+                "count": 3,
+                "average": 7.586715353212726
+            },
+            "dale_chall_buckets": [
+                {
+                    "start": 0,
+                    "end": 5,
+                    "count": 0
+                },
+                {
+                    "start": 5,
+                    "end": 6,
+                    "count": 0
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "count": 0
+                },
+                {
+                    "start": 7,
+                    "end": 8,
+                    "count": 3
+                },
+                {
+                    "start": 8,
+                    "end": 9,
+                    "count": 0
+                },
+                {
+                    "start": 9,
+                    "end": 10,
+                    "count": 0
+                }
+            ],
+            "smog_percentiles": {
+                "p25": 16.154368739753647,
+                "p50": 16.277404618132717,
+                "p75": 16.63859855392689,
+                "p90": 16.855314915403394,
+                "p95": 16.92755370256223,
+                "p99": 16.985344732289295,
+                "std": 0.4110027842875404,
+                "count": 3,
+                "average": 16.436176656409454
+            },
+            "smog_buckets": [
+                {
+                    "start": 1,
+                    "end": 2,
+                    "count": 0
+                },
+                {
+                    "start": 2,
+                    "end": 3,
+                    "count": 0
+                },
+                {
+                    "start": 3,
+                    "end": 4,
+                    "count": 0
+                },
+                {
+                    "start": 4,
+                    "end": 5,
+                    "count": 0
+                },
+                {
+                    "start": 5,
+                    "end": 6,
+                    "count": 0
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "count": 0
+                },
+                {
+                    "start": 7,
+                    "end": 8,
+                    "count": 0
+                },
+                {
+                    "start": 8,
+                    "end": 9,
+                    "count": 0
+                },
+                {
+                    "start": 9,
+                    "end": 10,
+                    "count": 0
+                },
+                {
+                    "start": 10,
+                    "end": 11,
+                    "count": 0
+                },
+                {
+                    "start": 11,
+                    "end": 12,
+                    "count": 0
+                },
+                {
+                    "start": 12,
+                    "end": 13,
+                    "count": 0
+                },
+                {
+                    "start": 13,
+                    "end": 14,
+                    "count": 0
+                },
+                {
+                    "start": 14,
+                    "end": 15,
+                    "count": 0
+                },
+                {
+                    "start": 15,
+                    "end": 16,
+                    "count": 0
+                },
+                {
+                    "start": 16,
+                    "end": 17,
+                    "count": 3
+                },
+                {
+                    "start": 17,
+                    "end": 18,
+                    "count": 0
+                }
+            ],
+            "coleman_liau_index_percentiles": {
+                "p25": 8.019841600515267,
+                "p50": 8.02558471324457,
+                "p75": 8.045583879515855,
+                "p90": 8.057583379278626,
+                "p95": 8.061583212532883,
+                "p99": 8.064783079136289,
+                "std": 0.022066716248806864,
+                "count": 3,
+                "average": 8.035088748939225
+            },
+            "coleman_liau_index_buckets": [
+                {
+                    "start": 1,
+                    "end": 2,
+                    "count": 0
+                },
+                {
+                    "start": 2,
+                    "end": 3,
+                    "count": 0
+                },
+                {
+                    "start": 3,
+                    "end": 4,
+                    "count": 0
+                },
+                {
+                    "start": 4,
+                    "end": 5,
+                    "count": 0
+                },
+                {
+                    "start": 5,
+                    "end": 6,
+                    "count": 0
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "count": 0
+                },
+                {
+                    "start": 7,
+                    "end": 8,
+                    "count": 0
+                },
+                {
+                    "start": 8,
+                    "end": 9,
+                    "count": 3
+                },
+                {
+                    "start": 9,
+                    "end": 10,
+                    "count": 0
+                },
+                {
+                    "start": 10,
+                    "end": 11,
+                    "count": 0
+                },
+                {
+                    "start": 11,
+                    "end": 12,
+                    "count": 0
+                },
+                {
+                    "start": 12,
+                    "end": 13,
+                    "count": 0
+                },
+                {
+                    "start": 13,
+                    "end": 14,
+                    "count": 0
+                },
+                {
+                    "start": 14,
+                    "end": 15,
+                    "count": 0
+                },
+                {
+                    "start": 15,
+                    "end": 16,
+                    "count": 0
+                },
+                {
+                    "start": 16,
+                    "end": 17,
+                    "count": 0
+                },
+                {
+                    "start": 17,
+                    "end": 18,
+                    "count": 0
+                }
+            ],
+            "automated_readability_index_percentiles": {
+                "p25": 7.4179179933125035,
+                "p50": 7.486008077224483,
+                "p75": 7.863804532951388,
+                "p90": 8.090482406387531,
+                "p95": 8.166041697532911,
+                "p99": 8.226489130449217,
+                "std": 0.39224778320630743,
+                "count": 3,
+                "average": 7.692478991767767
+            },
+            "automated_readability_index_buckets": [
+                {
+                    "start": 1,
+                    "end": 2,
+                    "count": 0
+                },
+                {
+                    "start": 2,
+                    "end": 3,
+                    "count": 0
+                },
+                {
+                    "start": 3,
+                    "end": 4,
+                    "count": 0
+                },
+                {
+                    "start": 4,
+                    "end": 5,
+                    "count": 0
+                },
+                {
+                    "start": 5,
+                    "end": 6,
+                    "count": 0
+                },
+                {
+                    "start": 6,
+                    "end": 7,
+                    "count": 0
+                },
+                {
+                    "start": 7,
+                    "end": 8,
+                    "count": 2
+                },
+                {
+                    "start": 8,
+                    "end": 9,
+                    "count": 1
+                },
+                {
+                    "start": 9,
+                    "end": 10,
+                    "count": 0
+                },
+                {
+                    "start": 10,
+                    "end": 11,
+                    "count": 0
+                },
+                {
+                    "start": 11,
+                    "end": 12,
+                    "count": 0
+                },
+                {
+                    "start": 12,
+                    "end": 13,
+                    "count": 0
+                },
+                {
+                    "start": 13,
+                    "end": 14,
+                    "count": 0
+                },
+                {
+                    "start": 14,
+                    "end": 15,
+                    "count": 0
+                }
+            ],
+            "forcast_percentiles": {
+                "p25": 10.75,
+                "p50": 11.2,
+                "p75": 11.45,
+                "p90": 11.6,
+                "p95": 11.649999999999999,
+                "p99": 11.69,
+                "std": 0.5792715732327584,
+                "count": 3,
+                "average": 11.066666666666668
+            },
+            "forcast_buckets": {
+                "p25": 10.75,
+                "p50": 11.2,
+                "p75": 11.45,
+                "p90": 11.6,
+                "p95": 11.649999999999999,
+                "p99": 11.69,
+                "std": 0.5792715732327584,
+                "count": 3,
+                "average": 11.066666666666668
+            }
+        }
+    }
+}
