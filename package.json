@@ -4,7 +4,8 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "build-gh-pages": "parcel build --public-url /books-under-the-cover-app/"
   },
   "dependencies": {
     "chart.js": "^3.8.0",
