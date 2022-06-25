@@ -200,11 +200,11 @@ export function App() {
                 <BookSelect value={selectedBookA} books={booksNonFiction} onChange={onSelectBookA} />
             </section>
             <section>
-                {statsA && <BarDemo />}
-            </section>
-            <section>
                 {statsA && <BarWithPercentiles buckets={statsA.stats.structure.word_length_buckets} percentiles={statsA.stats.structure.word_length_percentiles} />}
             </section>
+            {/* <section>
+                {statsA && <BarDemo />}
+            </section> */}
         </>
     );
 }
