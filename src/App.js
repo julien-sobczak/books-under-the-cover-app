@@ -121,12 +121,6 @@ function BarWithPercentiles({buckets, percentiles}) {
             p99X = f(p99, i, bucket);
         }
     }
-    console.log(`x p25 = ${p25X} (${p25})`);
-    console.log(`x p50 = ${p50X} (${p50})`);
-    console.log(`x p75 = ${p75X} (${p75})`);
-    console.log(`x p90 = ${p90X} (${p90})`);
-    console.log(`x p95 = ${p95X} (${p95})`);
-    console.log(`x p99 = ${p99X} (${p99})`);
 
     const line = (label, value) => { return {
         type: 'line',
