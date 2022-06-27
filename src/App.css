@@ -1,6 +1,40 @@
+:root {
+    --color-a: #DE68B5;
+    --color-b: #2B98CA;
+    --color-bg-dark: black;
+    --color-text-dark: white;
+    --color-bg-light: white;
+    --color-text-light: black;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+nav ul li {
+    list-style-type: none;
+    margin: 1em;
+    font-size: 1.5em;
+}
+
+section:nth-child(odd) {
+    --section-bg-color: var(--color-bg-dark);
+    --section-text-color: var(--color-text-dark);
+}
+section:nth-child(even) {
+    --section-bg-color: var(--color-bg-light);
+    --section-text-color: var(--color-text-light);
+}
 section {
+    background-color: var(--section-bg-color);
+    color: var(--section-text-color);
+    padding: 10rem;
+}
+
+.Content {
     max-width: 50rem;
-    margin: 0 auto;
+    margin: 2em auto;
 }
 
 h1, h2 {

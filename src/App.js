@@ -28,6 +28,11 @@ ChartJS.register(
     annotationPlugin,
 );
 
+// Utility function to fetch the variables from the CSS
+// (See this issue for context: https://github.com/chartjs/Chart.js/issues/9983)
+function cssvar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name);
+}
 
 
 function BookSelect({ value, books, onChange }) {
@@ -63,22 +68,45 @@ function BookSelect({ value, books, onChange }) {
     );
 }
 
-function BarWithPercentiles({ buckets, percentiles }) {
+function BarWithPercentiles({ dark, sets }) {
+    const rBuckets = sets[0].buckets;
+    for (let i = 1; i < sets.length; i++) {
+        const iBuckets = sets[i].buckets;
+        if (rBuckets.length !== iBuckets.length) {
+            throw "Unable to visualize sets with different buckets";
+        }
+        for (let j = 0; j < iBuckets.length; j++) {
+            if (rBuckets[j].start !== iBuckets[j].start) {
+                throw `Bucket ${j} differs between sets 0 and ${i}`;
+            }
+            if (rBuckets[j].end !== iBuckets[j].end) {
+                if (j < iBuckets.length - 1) {
+                    // The last bucket can differ for open intervals (ex: 5+)
+                    throw `Bucket ${j} differs between sets 0 and ${i}`;
+                }
+            }
+        }
+    }
     const labels = [];
-    for (let bucket of buckets) {
+    const datasets = [];
+    for (let bucket of rBuckets) {
         labels.push(`${bucket.start}-${bucket.end}`);
     }
+    for (let set of sets) {
+        datasets.push({
+            label: set.label,
+            data: labels.map((value, i) => set.buckets[i].count),
+            backgroundColor: set.backgroundColor,
+        });
+    }
+
     const data = {
         labels,
-        datasets: [
-            {
-                label: '',
-                data: labels.map((value, i) => buckets[i].count),
-                backgroundColor: 'rgba(0, 0, 0, 1)',
-            },
-        ],
+        datasets: datasets,
     };
 
+    const buckets = sets[0].buckets;
+    const percentiles = sets[0].percentiles; // TODO
     let p25X = undefined;
     let p50X = undefined;
     let p75X = undefined;
@@ -122,21 +150,24 @@ function BarWithPercentiles({ buckets, percentiles }) {
         }
     }
 
+    const textColor = cssvar(dark ? "--color-text-dark" : "--color-text-light");
+    const backgroundColor = cssvar(dark ? "--color-bg-dark" : "--color-bg-light");
     const line = (label, value) => {
         return {
             type: 'line',
-            borderColor: 'red',
+            borderColor: textColor,
             borderWidth: 5,
             scaleID: 'x',
             value: value,
             label: {
                 enabled: true,
-                backgroundColor: 'red',
-                borderColor: 'red',
+                backgroundColor: textColor,
+                borderColor: textColor,
                 borderRadius: 10,
                 borderWidth: 2,
                 content: label,
-                rotation: '0'
+                rotation: '0',
+                color: backgroundColor,
             },
         }
     }
@@ -150,9 +181,33 @@ function BarWithPercentiles({ buckets, percentiles }) {
 
     const options = {
         responsive: true,
+        scales: {
+            x: {
+                ticks: {
+                    color: textColor,
+                },
+                grid: {
+                    color: textColor,
+                },
+            },
+            y: {
+                ticks: {
+                    color: textColor,
+                },
+                grid: {
+                    color: textColor,
+                },
+            }
+        },
         plugins: {
             legend: {
-                display: false, // This will hide the dataset labels
+                display: sets.length > 1, // This will hide the dataset labels by default
+                labels: {
+                    color: textColor,
+                },
+                title: {
+                    color: textColor,
+                }
             },
             annotation: {
                 annotations: {
@@ -190,7 +245,9 @@ export function App() {
     const onSelectBookA = (option) => {
         if (!option) {
             setSelectedBookA(null);
+            setSelectedBookB(null);
             setStatsA(null);
+            setStatsB(null);
             return;
         }
         setSelectedBookA(option);
@@ -233,25 +290,117 @@ export function App() {
             });
     };
 
+    const sets = [];
+    if (statsA) {
+        sets.push({
+            label: statsA.title,
+            buckets: statsA.stats.structure.word_length_buckets,
+            percentiles: statsA.stats.structure.word_length_percentiles,
+            backgroundColor: cssvar("--color-a"),
+        });
+    }
+    if (statsB) {
+        sets.push({
+            label: statsB.title,
+            buckets: statsB.stats.structure.word_length_buckets,
+            percentiles: statsB.stats.structure.word_length_percentiles,
+            backgroundColor: cssvar("--color-b"),
+        });
+    }
+
     return (
         <>
-            <section>
-                <BookSelect value={selectedBookA} books={booksNonFiction} onChange={onSelectBookA} />
-            </section>
-            {statsA && <section>
-                <h1><strong>{statsA.title}</strong> ({statsA.year}) by <em>{statsA.author}</em></h1>
-                <h2># {statsA.number} on <a href={statsA.url}>Goodreads</a> ({statsA.avgRating} on {statsA.numberOfRatings} ratings)</h2>
-                <ul className="Genres">
-                    {statsA.genres.map((value, index) => {
-                        return <li key={index}>{value}</li>
-                    })}
-                </ul>
+            <header>
+                <div className="Content">
+                    <BookSelect value={selectedBookA} books={booksNonFiction} onChange={onSelectBookA} />
+                </div>
+                {statsA && <div className="Content">
+                    <h1><strong>{statsA.title}</strong> ({statsA.year}) by <em>{statsA.author}</em></h1>
+                    <h2># {statsA.number} on <a href={statsA.url}>Goodreads</a> ({statsA.avgRating} on {statsA.numberOfRatings} ratings)</h2>
+                    <ul className="Genres">
+                        {statsA.genres.map((value, index) => {
+                            return <li key={index}>{value}</li>
+                        })}
+                    </ul>
+                </div>}
+                {statsA && <div className="Content">
+                    or compare with <BookSelect value={selectedBookB} books={booksNonFiction.filter(book => book.title !== statsA.title)} onChange={onSelectBookB} />
+                </div>}
+            </header>
+            {statsA && <nav>
+                    <ul>
+                        <li><a href="#structure">Structure</a></li>
+                        <li><a href="#vocabulary">Vocabulary</a></li>
+                        <li><a href="#grammar">Grammar</a></li>
+                        <li><a href="#tone">Tone</a></li>
+                        <li><a href="#readability">Readability</a></li>
+                    </ul>
+            </nav>}
+            {statsA && <section id="structure">
+                <div className="Content">
+                    <table>
+                        {statsB && <thead>
+                            <tr>
+                                <th></th>
+                                <th>{statsA.title}</th>
+                                <th>{statsB.title}</th>
+                            </tr>
+                        </thead>}
+                        <tbody>
+                            <tr>
+                                <th>Paragraphs count</th>
+                                <td>{statsA.stats.structure.paragraphs_count}</td>
+                                {statsB && <td>{statsB.stats.structure.paragraphs_count}</td>}
+                            </tr>
+                            <tr>
+                                <th>Sentences count</th>
+                                <td>{statsA.stats.structure.sentences_count}</td>
+                                {statsB && <td>{statsB.stats.structure.sentences_count}</td>}
+                            </tr>
+                            <tr>
+                                <th>Words count</th>
+                                <td>{statsA.stats.structure.words_count}</td>
+                                {statsB && <td>{statsB.stats.structure.words_count}</td>}
+                            </tr>
+                            <tr>
+                                <th>Characters count</th>
+                                <td>{statsA.stats.structure.characters_count}</td>
+                                {statsB && <td>{statsB.stats.structure.characters_count}</td>}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>}
             {statsA && <section>
-                or compare with <BookSelect value={selectedBookB} books={booksNonFiction.filter(book => book.title !== statsA.title)} onChange={onSelectBookB} />
+                <div className="Content">
+                    <BarWithPercentiles dark={false} sets={sets} />
+                </div>
             </section>}
             {statsA && <section>
-                <BarWithPercentiles buckets={statsA.stats.structure.word_length_buckets} percentiles={statsA.stats.structure.word_length_percentiles} />
+                <div className="Content">
+                    <BarWithPercentiles dark={true} sets={sets} />
+                </div>
+            </section>}
+            {statsA && <section>
+                <div className="Content">
+                    <BarWithPercentiles dark={false} sets={sets} />
+                </div>
+            </section>}
+            {statsA && <section id="vocabulary">
+                <div className="Content">
+                </div>
+            </section>}
+            {statsA && <section id="grammar">
+                <div className="Content">
+                </div>
+            </section>}
+            {statsA && <section id="tone">
+                <div className="Content">
+                </div>
+            </section>}
+            {statsA && <section id="readability">
+                <div className="Content">
+                </div>
             </section>}
         </>
     );
@@ -332,3 +481,4 @@ function BarDemo() {
     };
     return <Bar options={options} data={data} />;
 }
+
