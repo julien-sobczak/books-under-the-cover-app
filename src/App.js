@@ -90,7 +90,11 @@ function BarWithPercentiles({ dark, sets }) {
     const labels = [];
     const datasets = [];
     for (let bucket of rBuckets) {
-        labels.push(`${bucket.start}-${bucket.end}`);
+        if (bucket.start == bucket.end) { // Ex: 1-1, 2-2, 3-3
+            labels.push(bucket.start);
+        } else {
+            labels.push(`${bucket.start}-${bucket.end}`);
+        }
     }
     for (let set of sets) {
         datasets.push({
@@ -211,11 +215,11 @@ function BarWithPercentiles({ dark, sets }) {
             },
             annotation: {
                 annotations: {
-                    p25Line,
+                    // p25Line,
                     p50Line,
-                    p75Line,
+                    // p75Line,
                     p90Line,
-                    p95Line,
+                    // p95Line,
                     p99Line,
                 }
             }
@@ -241,6 +245,9 @@ export function App() {
     const [selectedBookB, setSelectedBookB] = useState(null);
     const [statsA, setStatsA] = useState(null);
     const [statsB, setStatsB] = useState(null);
+
+    const [lengthOption, setLengthOption] = useState("sentences");
+    const [occurrenceOption, setOccurrenceOption] = useState("words_per_sentence");
 
     const onSelectBookA = (option) => {
         if (!option) {
@@ -290,23 +297,112 @@ export function App() {
             });
     };
 
-    const sets = [];
+    const wordsLengthSets = [];
+    const sentencesLengthSets = [];
+
+    const syllablesPerWordSets = [];
+
+    const wordsPerParagraphSets = [];
+    const wordsPerSentenceSets = [];
+    const clausesPerSentenceSets = [];
+    const sentencesPerParagraphSets = [];
+
     if (statsA) {
-        sets.push({
+        wordsLengthSets.push({
             label: statsA.title,
             buckets: statsA.stats.structure.word_length_buckets,
             percentiles: statsA.stats.structure.word_length_percentiles,
             backgroundColor: cssvar("--color-a"),
         });
+        sentencesLengthSets.push({
+            label: statsA.title,
+            buckets: statsA.stats.structure.sentence_length_buckets,
+            percentiles: statsA.stats.structure.sentence_length_percentiles,
+            backgroundColor: cssvar("--color-a"),
+        });
+        syllablesPerWordSets.push({
+            label: statsA.title,
+            buckets: statsA.stats.structure.syllables_buckets,
+            percentiles: statsA.stats.structure.syllables_percentiles,
+            backgroundColor: cssvar("--color-a"),
+        });
+        wordsPerParagraphSets.push({
+            label: statsA.title,
+            buckets: statsA.stats.structure.words_per_paragraph_buckets,
+            percentiles: statsA.stats.structure.words_per_paragraph_percentiles,
+            backgroundColor: cssvar("--color-a"),
+        });
+        wordsPerSentenceSets.push({
+            label: statsA.title,
+            buckets: statsA.stats.structure.words_per_sentence_buckets,
+            percentiles: statsA.stats.structure.words_per_sentence_percentiles,
+            backgroundColor: cssvar("--color-a"),
+        });
+        clausesPerSentenceSets.push({
+            label: statsA.title,
+            buckets: statsA.stats.structure.clauses_per_sentence_buckets,
+            percentiles: statsA.stats.structure.clauses_per_sentence_percentiles,
+            backgroundColor: cssvar("--color-a"),
+        });
+        sentencesPerParagraphSets.push({
+            label: statsA.title,
+            buckets: statsA.stats.structure.sentences_per_paragraph_buckets,
+            percentiles: statsA.stats.structure.sentences_per_paragraph_percentiles,
+            backgroundColor: cssvar("--color-a"),
+        });
     }
     if (statsB) {
-        sets.push({
+        wordsLengthSets.push({
             label: statsB.title,
             buckets: statsB.stats.structure.word_length_buckets,
             percentiles: statsB.stats.structure.word_length_percentiles,
             backgroundColor: cssvar("--color-b"),
         });
+        sentencesLengthSets.push({
+            label: statsB.title,
+            buckets: statsB.stats.structure.sentence_length_buckets,
+            percentiles: statsB.stats.structure.sentence_length_percentiles,
+            backgroundColor: cssvar("--color-b"),
+        });
+        syllablesPerWordSets.push({
+            label: statsB.title,
+            buckets: statsB.stats.structure.syllables_buckets,
+            percentiles: statsB.stats.structure.syllables_percentiles,
+            backgroundColor: cssvar("--color-b"),
+        });
+        wordsPerParagraphSets.push({
+            label: statsB.title,
+            buckets: statsB.stats.structure.words_per_paragraph_buckets,
+            percentiles: statsB.stats.structure.words_per_paragraph_percentiles,
+            backgroundColor: cssvar("--color-b"),
+        });
+        wordsPerSentenceSets.push({
+            label: statsB.title,
+            buckets: statsB.stats.structure.words_per_sentence_buckets,
+            percentiles: statsB.stats.structure.words_per_sentence_percentiles,
+            backgroundColor: cssvar("--color-b"),
+        });
+        clausesPerSentenceSets.push({
+            label: statsB.title,
+            buckets: statsB.stats.structure.clauses_per_sentence_buckets,
+            percentiles: statsB.stats.structure.clauses_per_sentence_percentiles,
+            backgroundColor: cssvar("--color-b"),
+        });
+        sentencesPerParagraphSets.push({
+            label: statsB.title,
+            buckets: statsB.stats.structure.sentences_per_paragraph_buckets,
+            percentiles: statsB.stats.structure.sentences_per_paragraph_percentiles,
+            backgroundColor: cssvar("--color-b"),
+        });
     }
+
+    const onLengthOptionChanged = (event) => {
+        setLengthOption(event.target.value);
+    };
+    const onOccurrenceOptionChanged = (event) => {
+        setOccurrenceOption(event.target.value);
+    };
+
 
     return (
         <>
@@ -330,14 +426,19 @@ export function App() {
             {statsA && <nav>
                     <ul>
                         <li><a href="#structure">Structure</a></li>
+                        <li>|</li>
                         <li><a href="#vocabulary">Vocabulary</a></li>
+                        <li>|</li>
                         <li><a href="#grammar">Grammar</a></li>
+                        <li>|</li>
                         <li><a href="#tone">Tone</a></li>
+                        <li>|</li>
                         <li><a href="#readability">Readability</a></li>
                     </ul>
             </nav>}
             {statsA && <section id="structure">
                 <div className="Content">
+                    <h3>Count</h3>
                     <table>
                         {statsB && <thead>
                             <tr>
@@ -348,22 +449,22 @@ export function App() {
                         </thead>}
                         <tbody>
                             <tr>
-                                <th>Paragraphs count</th>
+                                <th>Paragraphs</th>
                                 <td>{statsA.stats.structure.paragraphs_count}</td>
                                 {statsB && <td>{statsB.stats.structure.paragraphs_count}</td>}
                             </tr>
                             <tr>
-                                <th>Sentences count</th>
+                                <th>Sentences</th>
                                 <td>{statsA.stats.structure.sentences_count}</td>
                                 {statsB && <td>{statsB.stats.structure.sentences_count}</td>}
                             </tr>
                             <tr>
-                                <th>Words count</th>
+                                <th>Words</th>
                                 <td>{statsA.stats.structure.words_count}</td>
                                 {statsB && <td>{statsB.stats.structure.words_count}</td>}
                             </tr>
                             <tr>
-                                <th>Characters count</th>
+                                <th>Characters</th>
                                 <td>{statsA.stats.structure.characters_count}</td>
                                 {statsB && <td>{statsB.stats.structure.characters_count}</td>}
                             </tr>
@@ -373,17 +474,88 @@ export function App() {
             </section>}
             {statsA && <section>
                 <div className="Content">
-                    <BarWithPercentiles dark={false} sets={sets} />
+                    <h3>Length</h3>
+                    <form>
+                        <div className="radio">
+                            <label>
+                                <input
+                                    type="radio"
+                                    value="words"
+                                    checked={lengthOption === "words"}
+                                    onChange={onLengthOptionChanged}
+                                /> Word Length
+                            </label>
+                        </div>
+                        <div className="radio">
+                            <label>
+                                <input
+                                    type="radio"
+                                    value="sentences"
+                                    checked={lengthOption === "sentences"}
+                                    onChange={onLengthOptionChanged}
+                                /> Sentence Length
+                            </label>
+                        </div>
+                    </form>
+                    {lengthOption === "words" && <BarWithPercentiles dark={false} sets={wordsLengthSets} />}
+                    {lengthOption === "sentences" && <BarWithPercentiles dark={false} sets={sentencesLengthSets} />}
                 </div>
             </section>}
             {statsA && <section>
                 <div className="Content">
-                    <BarWithPercentiles dark={true} sets={sets} />
+                    <h3>Syllables</h3>
+                    <BarWithPercentiles dark={true} sets={syllablesPerWordSets} />
                 </div>
             </section>}
             {statsA && <section>
                 <div className="Content">
-                    <BarWithPercentiles dark={false} sets={sets} />
+                    <h3>Occurrences</h3>
+                    <form>
+                        <div className="radio">
+                            <label>
+                                <input
+                                    type="radio"
+                                    value="words_per_sentence"
+                                    checked={occurrenceOption === "words_per_sentence"}
+                                    onChange={onOccurrenceOptionChanged}
+                                /> Words per sentence
+                            </label>
+                        </div>
+                        <div className="radio">
+                            <label>
+                                <input
+                                    type="radio"
+                                    value="words_per_paragraph"
+                                    checked={occurrenceOption === "words_per_paragraph"}
+                                    onChange={onOccurrenceOptionChanged}
+                                /> Words per paragraph
+                            </label>
+                        </div>
+                        <div className="radio">
+                            <label>
+                                <input
+                                    type="radio"
+                                    value="clauses_per_sentence"
+                                    checked={occurrenceOption === "clauses_per_sentence"}
+                                    onChange={onOccurrenceOptionChanged}
+                                /> Clauses per sentence
+                            </label>
+                        </div>
+                        <div className="radio">
+                            <label>
+                                <input
+                                    type="radio"
+                                    value="sentences_per_paragraph"
+                                    checked={occurrenceOption === "sentences_per_paragraph"}
+                                    onChange={onOccurrenceOptionChanged}
+                                /> Sentences per paragraph
+                            </label>
+                        </div>
+                    </form>
+                    {occurrenceOption === "words_per_sentence" && <BarWithPercentiles dark={false} sets={wordsPerSentenceSets} />}
+                    {occurrenceOption === "words_per_paragraph" && <BarWithPercentiles dark={false} sets={wordsPerParagraphSets} />}
+                    {occurrenceOption === "clauses_per_sentence" && <BarWithPercentiles dark={false} sets={clausesPerSentenceSets} />}
+                    {occurrenceOption === "sentences_per_paragraph" && <BarWithPercentiles dark={false} sets={sentencesPerParagraphSets} />}
                 </div>
             </section>}
             {statsA && <section id="vocabulary">
