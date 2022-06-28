@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Reset.css';
 import './App.css';
 import booksAll from './assets/all.min.json';
 import booksNonFiction from './assets/nonfiction.min.json';
@@ -62,7 +63,7 @@ function BookSelect({ value, books, onChange }) {
     );
 }
 
-function BarWithPercentiles({buckets, percentiles}) {
+function BarWithPercentiles({ buckets, percentiles }) {
     const labels = [];
     for (let bucket of buckets) {
         labels.push(`${bucket.start}-${bucket.end}`);
@@ -101,7 +102,6 @@ function BarWithPercentiles({buckets, percentiles}) {
 
     for (var i = 0; i < buckets.length; i++) {
         const bucket = buckets[i];
-        console.log(`bucket [${bucket.start}-${bucket.end}]`);
         if (p25 >= bucket.start && p25 <= bucket.end) {
             p25X = f(p25, i, bucket);
         }
@@ -122,22 +122,24 @@ function BarWithPercentiles({buckets, percentiles}) {
         }
     }
 
-    const line = (label, value) => { return {
-        type: 'line',
-        borderColor: 'red',
-        borderWidth: 5,
-        scaleID: 'x',
-        value: value,
-        label: {
-            enabled: true,
-            backgroundColor: 'red',
+    const line = (label, value) => {
+        return {
+            type: 'line',
             borderColor: 'red',
-            borderRadius: 10,
-            borderWidth: 2,
-            content: label,
-            rotation: '0'
-        },
-    }}
+            borderWidth: 5,
+            scaleID: 'x',
+            value: value,
+            label: {
+                enabled: true,
+                backgroundColor: 'red',
+                borderColor: 'red',
+                borderRadius: 10,
+                borderWidth: 2,
+                content: label,
+                rotation: '0'
+            },
+        }
+    }
 
     const p25Line = line('p25', p25X);
     const p50Line = line('p50', p50X);
@@ -150,7 +152,7 @@ function BarWithPercentiles({buckets, percentiles}) {
         responsive: true,
         plugins: {
             legend: {
-                display: false, // This will do dataset labels
+                display: false, // This will hide the dataset labels
             },
             annotation: {
                 annotations: {
@@ -172,26 +174,63 @@ function BarWithPercentiles({buckets, percentiles}) {
     );
 }
 
+function logParsing(data) {
+    const { total_files, skipped_files, parsed_characters, percent_characters } = data.stats.parsing;
+    const parsed_files = total_files - skipped_files;
+    const parsed_percent = Math.round(parsed_files * 100 / total_files);
+    console.log(`Retrieved ${data.title} containing ${total_files} files (${parsed_percent}% parsed) containing ${parsed_characters} characters (${percent_characters}% parsed)`);
+}
+
 export function App() {
     const [selectedBookA, setSelectedBookA] = useState(null);
+    const [selectedBookB, setSelectedBookB] = useState(null);
     const [statsA, setStatsA] = useState(null);
     const [statsB, setStatsB] = useState(null);
 
     const onSelectBookA = (option) => {
+        if (!option) {
+            setSelectedBookA(null);
+            setStatsA(null);
+            return;
+        }
         setSelectedBookA(option);
         const slug = option["value"];
         fetch(`stats/${slug}.json`, {
-          headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-           }
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
         })
-          .then(response => {
-            return response.json();
-          })
-          .then(data => {
-            setStatsA(data)
-          });
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                setStatsA(data);
+                logParsing(data);
+            });
+    };
+
+    const onSelectBookB = (option) => {
+        if (!option) {
+            setSelectedBookB(null);
+            setStatsB(null);
+            return;
+        }
+        setSelectedBookB(option);
+        const slug = option["value"];
+        fetch(`stats/${slug}.json`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                setStatsB(data);
+                logParsing(data);
+            });
     };
 
     return (
@@ -199,12 +238,21 @@ export function App() {
             <section>
                 <BookSelect value={selectedBookA} books={booksNonFiction} onChange={onSelectBookA} />
             </section>
-            <section>
-                {statsA && <BarWithPercentiles buckets={statsA.stats.structure.word_length_buckets} percentiles={statsA.stats.structure.word_length_percentiles} />}
-            </section>
-            {/* <section>
-                {statsA && <BarDemo />}
-            </section> */}
+            {statsA && <section>
+                <h1><strong>{statsA.title}</strong> ({statsA.year}) by <em>{statsA.author}</em></h1>
+                <h2># {statsA.number} on <a href={statsA.url}>Goodreads</a> ({statsA.avgRating} on {statsA.numberOfRatings} ratings)</h2>
+                <ul className="Genres">
+                    {statsA.genres.map((value, index) => {
+                        return <li key={index}>{value}</li>
+                    })}
+                </ul>
+            </section>}
+            {statsA && <section>
+                or compare with <BookSelect value={selectedBookB} books={booksNonFiction.filter(book => book.title !== statsA.title)} onChange={onSelectBookB} />
+            </section>}
+            {statsA && <section>
+                <BarWithPercentiles buckets={statsA.stats.structure.word_length_buckets} percentiles={statsA.stats.structure.word_length_percentiles} />
+            </section>}
         </>
     );
 }

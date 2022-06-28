@@ -2,3 +2,23 @@ section {
     max-width: 50rem;
     margin: 0 auto;
 }
+
+h1, h2 {
+    font-weight: normal;
+    margin: 1em;
+}
+
+ul.Genres {
+    display: flex;
+    flex-direction: center;
+    flex-wrap: wrap;
+}
+ul.Genres li {
+    list-style-type: none;
+    background: black;
+    color: white;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    padding: 0.25em 0.5em;
+    margin: 0.125em 0.25em;
+}

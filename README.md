@@ -1,5 +1,8 @@
 # Books Under the Cover App
 
+A companion app to the blog post [Books Under the Cover](TODO).
+
+The application is accessible [here](https://julien-sobczak.github.io/books-under-the-cover-app/).
 
 ## Dependencies
 
