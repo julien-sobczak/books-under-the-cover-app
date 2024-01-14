@@ -1,11 +1,44 @@
 :root {
-    --color-a: #DE68B5;
-    --color-b: #2B98CA;
+    --color-1: #DE68B5;
+    --color-2: #2B98CA;
+    --color-3: pink;
+    --color-4: orange;
+    --color-5: cyan;
+    --color-6: yellow;
+    --color-7: blue;
+    --color-8: green;
+    --color-9: red;
     --color-bg-dark: black;
     --color-text-dark: white;
     --color-bg-light: white;
     --color-text-light: black;
 }
+
+
+aside {
+    position: fixed;
+    width: 300px;
+    min-height: 100vh;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    z-index: 10;
+    /* TODO FIXME use grid on top element to split the page instead. */
+}
+aside .BookCover {
+    padding: 1em;
+    border: 2px solid black;
+}
+aside li:nth-child(1) .BookCover { background-color: var(--color-1); color: #FFF; }
+aside li:nth-child(2) .BookCover { background-color: var(--color-2); color: #FFF; }
+aside li:nth-child(3) .BookCover { background-color: var(--color-3); color: #FFF; }
+aside li:nth-child(4) .BookCover { background-color: var(--color-4); color: #FFF; }
+aside li:nth-child(5) .BookCover { background-color: var(--color-5); color: #FFF; }
+aside li:nth-child(6) .BookCover { background-color: var(--color-6); color: #000; }
+aside li:nth-child(7) .BookCover { background-color: var(--color-7); color: #FFF; }
+aside li:nth-child(8) .BookCover { background-color: var(--color-8); color: #FFF; }
+aside li:nth-child(9) .BookCover { background-color: var(--color-9); color: #FFF; }
 
 nav {
     position: sticky;

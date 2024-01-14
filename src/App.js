@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Reset.css';
 import './App.css';
+
 import booksAll from './assets/all.min.json';
 import booksNonFiction from './assets/nonfiction.min.json';
 
@@ -34,6 +35,29 @@ function cssvar(name) {
     return getComputedStyle(document.documentElement).getPropertyValue(name);
 }
 
+
+function mostPopularGenres(books) {
+    let counter = new Map();
+    for (let book of books) {
+        for (let genre of book.genres) {
+            if (!counter.has(genre)) {
+                counter.set(genre, 0);
+            }
+            counter.set(genre, counter.get(genre) + 1);
+        }
+    }
+
+    const entries = [...counter.entries()]
+    entries.sort((e1, e2) => e1[1] > e2[1]);
+
+    const maxGenres = Math.min(entries.length, 15);
+    const results = entries.slice(0, maxGenres).map(e => e[0]);
+    results.sort();
+    return results;
+}
+
+const mostPopularGenresAll = mostPopularGenres(booksAll);
+const mostPopularGenresNonfiction = mostPopularGenres(booksNonFiction);
 
 function BookSelect({ value, books, onChange }) {
 
@@ -240,24 +264,114 @@ function logParsing(data) {
     console.log(`Retrieved ${data.title} containing ${total_files} files (${parsed_percent}% parsed) containing ${parsed_characters} characters (${percent_characters}% parsed)`);
 }
 
+export function Library({ onSelect }) {
+    const [kind, setKind] = useState("nonfiction");
+    const [filteredGenres, setFilteredGenres] = useState([]);
+
+    let books = [];
+    let genres = [];
+    if (kind === "nonfiction") {
+        books = booksNonFiction;
+        genres = mostPopularGenresNonfiction;
+    } else {
+        books = booksAll;
+        genres = mostPopularGenresAll;
+    }
+
+    if (genres.length > 0) {
+        books = books.filter(b => {
+            for (let genre of genres) {
+                if (b.genres.includes(genre)) {
+                    return true;
+                }
+            }
+            return false;
+        });
+    }
+
+    const onFilteredGenresChanged = (event) => {
+        const genre = event.target.value;
+        if (filteredGenres.includes(genre)) {
+            setFilteredGenres(filteredGenres.splice(filteredGenres.indexOf(genre) - 1, 1));
+        } else {
+            const newFilteredGenres = [...filteredGenres, genre];
+            newFilteredGenres.sort();
+            setFilteredGenres(newFilteredGenres);
+        }
+        return;
+    };
+
+    return (
+        <div className="FullScreen">
+        <form>
+            <div className="Form">
+
+                {/* Kinds */}
+                <div>
+                    <label>
+                        <input
+                            type="radio"
+                            value="all"
+                            checked={kind === "all"}
+                            onChange={setKind}
+                        /> All
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            value="nonfiction"
+                            checked={kind === "nonfiction"}
+                            onChange={setKind}
+                        /> Nonfiction
+                    </label>
+                </div>
+
+                {/* Books */}
+                <div>
+                    <BookSelect books={books} onChange={onSelect} />
+                </div>
+
+                {/* Genres */}
+                <div>
+                    {genres.map((value, index) => {
+                        return (
+                            <label key={index}>
+                                <input
+                                    type="checkbox"
+                                    value={value}
+                                    checked={filteredGenres.includes(value)}
+                                    onChange={onFilteredGenresChanged}
+                                /> {value}
+                            </label>
+                        );
+                    })}
+                </div>
+            </div>
+        </form>
+
+        </div>
+
+    );
+}
+
 export function App() {
-    const [selectedBookA, setSelectedBookA] = useState(null);
-    const [selectedBookB, setSelectedBookB] = useState(null);
-    const [statsA, setStatsA] = useState(null);
-    const [statsB, setStatsB] = useState(null);
+    const [showLibrary, setShowLibrary] = useState(true);
+
+    const [selectedBooks, setSelectedBooks] = useState([]);
+    const [stats, setStats] = useState([]);
 
     const [lengthOption, setLengthOption] = useState("sentences");
     const [occurrenceOption, setOccurrenceOption] = useState("words_per_sentence");
 
-    const onSelectBookA = (option) => {
+    const onAddBook = () => {
+        setShowLibrary(true);
+    };
+
+    const onSelectBook = (option) => {
         if (!option) {
-            setSelectedBookA(null);
-            setSelectedBookB(null);
-            setStatsA(null);
-            setStatsB(null);
             return;
         }
-        setSelectedBookA(option);
+        setSelectedBooks([...selectedBooks, option]);
         const slug = option["value"];
         fetch(`stats/${slug}.json`, {
             headers: {
@@ -269,32 +383,32 @@ export function App() {
                 return response.json();
             })
             .then(data => {
-                setStatsA(data);
+                setStats([...stats, data]);
                 logParsing(data);
+                setShowLibrary(false);
             });
     };
 
-    const onSelectBookB = (option) => {
-        if (!option) {
-            setSelectedBookB(null);
-            setStatsB(null);
-            return;
-        }
-        setSelectedBookB(option);
-        const slug = option["value"];
-        fetch(`stats/${slug}.json`, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+    const onDeselectBook = (book) => {
+        console.log("remove", book);
+        let index = -1;
+        for (let i = 0; i < selectedBooks.length; i++) {
+            if (selectedBooks[i].item.id === book.id) {
+                index = i;
+                break;
             }
-        })
-            .then(response => {
-                return response.json();
-            })
-            .then(data => {
-                setStatsB(data);
-                logParsing(data);
-            });
+        }
+        if (index >= 0) {
+            const newSelectedBooks = [...selectedBooks]
+            const newStats = [...stats]
+            newSelectedBooks.splice(index, 1);
+            newStats.splice(index, 1);
+            setSelectedBooks(newSelectedBooks);
+            setStats(newStats);
+            if (newSelectedBooks.length === 0) {
+                setShowLibrary(true);
+            }
+        }
     };
 
     const wordsLengthSets = [];
@@ -307,92 +421,49 @@ export function App() {
     const clausesPerSentenceSets = [];
     const sentencesPerParagraphSets = [];
 
-    if (statsA) {
+    for (let i = 0; i < stats.length; i++) {
+        const statsBook = stats[i];
         wordsLengthSets.push({
-            label: statsA.title,
-            buckets: statsA.stats.structure.word_length_buckets,
-            percentiles: statsA.stats.structure.word_length_percentiles,
-            backgroundColor: cssvar("--color-a"),
+            label: statsBook.title,
+            buckets: statsBook.stats.structure.word_length_buckets,
+            percentiles: statsBook.stats.structure.word_length_percentiles,
+            backgroundColor: cssvar(`--color-${i+1}`),
         });
         sentencesLengthSets.push({
-            label: statsA.title,
-            buckets: statsA.stats.structure.sentence_length_buckets,
-            percentiles: statsA.stats.structure.sentence_length_percentiles,
-            backgroundColor: cssvar("--color-a"),
+            label: statsBook.title,
+            buckets: statsBook.stats.structure.sentence_length_buckets,
+            percentiles: statsBook.stats.structure.sentence_length_percentiles,
+            backgroundColor: cssvar(`--color-${i+1}`),
         });
         syllablesPerWordSets.push({
-            label: statsA.title,
-            buckets: statsA.stats.structure.syllables_buckets,
-            percentiles: statsA.stats.structure.syllables_percentiles,
-            backgroundColor: cssvar("--color-a"),
+            label: statsBook.title,
+            buckets: statsBook.stats.structure.syllables_buckets,
+            percentiles: statsBook.stats.structure.syllables_percentiles,
+            backgroundColor: cssvar(`--color-${i+1}`),
         });
         wordsPerParagraphSets.push({
-            label: statsA.title,
-            buckets: statsA.stats.structure.words_per_paragraph_buckets,
-            percentiles: statsA.stats.structure.words_per_paragraph_percentiles,
-            backgroundColor: cssvar("--color-a"),
+            label: statsBook.title,
+            buckets: statsBook.stats.structure.words_per_paragraph_buckets,
+            percentiles: statsBook.stats.structure.words_per_paragraph_percentiles,
+            backgroundColor: cssvar(`--color-${i+1}`),
         });
         wordsPerSentenceSets.push({
-            label: statsA.title,
-            buckets: statsA.stats.structure.words_per_sentence_buckets,
-            percentiles: statsA.stats.structure.words_per_sentence_percentiles,
-            backgroundColor: cssvar("--color-a"),
+            label: statsBook.title,
+            buckets: statsBook.stats.structure.words_per_sentence_buckets,
+            percentiles: statsBook.stats.structure.words_per_sentence_percentiles,
+            backgroundColor: cssvar(`--color-${i+1}`),
         });
         clausesPerSentenceSets.push({
-            label: statsA.title,
-            buckets: statsA.stats.structure.clauses_per_sentence_buckets,
-            percentiles: statsA.stats.structure.clauses_per_sentence_percentiles,
-            backgroundColor: cssvar("--color-a"),
+            label: statsBook.title,
+            buckets: statsBook.stats.structure.clauses_per_sentence_buckets,
+            percentiles: statsBook.stats.structure.clauses_per_sentence_percentiles,
+            backgroundColor: cssvar(`--color-${i+1}`),
         });
         sentencesPerParagraphSets.push({
-            label: statsA.title,
-            buckets: statsA.stats.structure.sentences_per_paragraph_buckets,
-            percentiles: statsA.stats.structure.sentences_per_paragraph_percentiles,
-            backgroundColor: cssvar("--color-a"),
-        });
-    }
-    if (statsB) {
-        wordsLengthSets.push({
-            label: statsB.title,
-            buckets: statsB.stats.structure.word_length_buckets,
-            percentiles: statsB.stats.structure.word_length_percentiles,
-            backgroundColor: cssvar("--color-b"),
-        });
-        sentencesLengthSets.push({
-            label: statsB.title,
-            buckets: statsB.stats.structure.sentence_length_buckets,
-            percentiles: statsB.stats.structure.sentence_length_percentiles,
-            backgroundColor: cssvar("--color-b"),
-        });
-        syllablesPerWordSets.push({
-            label: statsB.title,
-            buckets: statsB.stats.structure.syllables_buckets,
-            percentiles: statsB.stats.structure.syllables_percentiles,
-            backgroundColor: cssvar("--color-b"),
-        });
-        wordsPerParagraphSets.push({
-            label: statsB.title,
-            buckets: statsB.stats.structure.words_per_paragraph_buckets,
-            percentiles: statsB.stats.structure.words_per_paragraph_percentiles,
-            backgroundColor: cssvar("--color-b"),
-        });
-        wordsPerSentenceSets.push({
-            label: statsB.title,
-            buckets: statsB.stats.structure.words_per_sentence_buckets,
-            percentiles: statsB.stats.structure.words_per_sentence_percentiles,
-            backgroundColor: cssvar("--color-b"),
-        });
-        clausesPerSentenceSets.push({
-            label: statsB.title,
-            buckets: statsB.stats.structure.clauses_per_sentence_buckets,
-            percentiles: statsB.stats.structure.clauses_per_sentence_percentiles,
-            backgroundColor: cssvar("--color-b"),
-        });
-        sentencesPerParagraphSets.push({
-            label: statsB.title,
-            buckets: statsB.stats.structure.sentences_per_paragraph_buckets,
-            percentiles: statsB.stats.structure.sentences_per_paragraph_percentiles,
-            backgroundColor: cssvar("--color-b"),
+            label: statsBook.title,
+            buckets: statsBook.stats.structure.sentences_per_paragraph_buckets,
+            percentiles: statsBook.stats.structure.sentences_per_paragraph_percentiles,
+            backgroundColor: cssvar(`--color-${i+1}`),
         });
     }
 
@@ -403,254 +474,204 @@ export function App() {
         setOccurrenceOption(event.target.value);
     };
 
-
     return (
         <>
-            <header>
-                <div className="Content">
-                    <BookSelect value={selectedBookA} books={booksNonFiction} onChange={onSelectBookA} />
-                </div>
-                {statsA && <div className="Content">
-                    <h1><strong>{statsA.title}</strong> ({statsA.year}) by <em>{statsA.author}</em></h1>
-                    <h2># {statsA.number} on <a href={statsA.url}>Goodreads</a> ({statsA.avgRating} on {statsA.numberOfRatings} ratings)</h2>
-                    <ul className="Genres">
-                        {statsA.genres.map((value, index) => {
-                            return <li key={index}>{value}</li>
+            {showLibrary && <Library onSelect={onSelectBook} />}
+            {!showLibrary && <div>
+                {/* <header>
+                    <div className="Content">
+                        <BookSelect value={selectedBookA} books={booksNonFiction} onChange={onSelectBookA} />
+                    </div>
+                    {statsA && <div className="Content">
+                        <h1><strong>{statsA.title}</strong> ({statsA.year}) by <em>{statsA.author}</em></h1>
+                        <h2># {statsA.number} on <a href={statsA.url}>Goodreads</a> ({statsA.avgRating} on {statsA.numberOfRatings} ratings)</h2>
+                        <ul className="Genres">
+                            {statsA.genres.map((value, index) => {
+                                return <li key={index}>{value}</li>
+                            })}
+                        </ul>
+                    </div>}
+                    {statsA && <div className="Content">
+                        or compare with <BookSelect value={selectedBookB} books={booksNonFiction.filter(book => book.title !== statsA.title)} onChange={onSelectBookB} />
+                    </div>}
+                </header> */}
+                <aside>
+                    <ul>
+                        {stats.map((book, index) => {
+                            return (
+                                <li key={index}>
+                                    <div className="BookOverview">
+                                        <div className="BookCover">
+                                            <strong>{book.title}</strong> ({book.year}) by <em>{book.author}</em>
+                                        </div>
+                                        <small># {book.number} on <a href={book.url}>Goodreads</a> ({book.avgRating} on {book.numberOfRatings} ratings)</small>
+                                        <button onClick={() => onDeselectBook(book)}>Remove</button><br/>
+                                    </div>
+                                </li>
+                            );
                         })}
                     </ul>
-                </div>}
-                {statsA && <div className="Content">
-                    or compare with <BookSelect value={selectedBookB} books={booksNonFiction.filter(book => book.title !== statsA.title)} onChange={onSelectBookB} />
-                </div>}
-            </header>
-            {statsA && <nav>
-                    <ul>
-                        <li><a href="#structure">Structure</a></li>
-                        <li>|</li>
-                        <li><a href="#vocabulary">Vocabulary</a></li>
-                        <li>|</li>
-                        <li><a href="#grammar">Grammar</a></li>
-                        <li>|</li>
-                        <li><a href="#tone">Tone</a></li>
-                        <li>|</li>
-                        <li><a href="#readability">Readability</a></li>
-                    </ul>
-            </nav>}
-            {statsA && <section id="structure">
-                <div className="Content">
-                    <h3>Count</h3>
-                    <table>
-                        {statsB && <thead>
-                            <tr>
-                                <th></th>
-                                <th>{statsA.title}</th>
-                                <th>{statsB.title}</th>
-                            </tr>
-                        </thead>}
-                        <tbody>
-                            <tr>
-                                <th>Paragraphs</th>
-                                <td>{statsA.stats.structure.paragraphs_count}</td>
-                                {statsB && <td>{statsB.stats.structure.paragraphs_count}</td>}
-                            </tr>
-                            <tr>
-                                <th>Sentences</th>
-                                <td>{statsA.stats.structure.sentences_count}</td>
-                                {statsB && <td>{statsB.stats.structure.sentences_count}</td>}
-                            </tr>
-                            <tr>
-                                <th>Words</th>
-                                <td>{statsA.stats.structure.words_count}</td>
-                                {statsB && <td>{statsB.stats.structure.words_count}</td>}
-                            </tr>
-                            <tr>
-                                <th>Characters</th>
-                                <td>{statsA.stats.structure.characters_count}</td>
-                                {statsB && <td>{statsB.stats.structure.characters_count}</td>}
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>}
-            {statsA && <section>
-                <div className="Content">
-                    <h3>Length</h3>
-                    <form>
-                        <div className="radio">
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="words"
-                                    checked={lengthOption === "words"}
-                                    onChange={onLengthOptionChanged}
-                                /> Word Length
-                            </label>
-                        </div>
-                        <div className="radio">
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="sentences"
-                                    checked={lengthOption === "sentences"}
-                                    onChange={onLengthOptionChanged}
-                                /> Sentence Length
-                            </label>
-                        </div>
-                    </form>
-                    {lengthOption === "words" && <BarWithPercentiles dark={false} sets={wordsLengthSets} />}
-                    {lengthOption === "sentences" && <BarWithPercentiles dark={false} sets={sentencesLengthSets} />}
-                </div>
-            </section>}
-            {statsA && <section>
-                <div className="Content">
-                    <h3>Syllables</h3>
-                    <BarWithPercentiles dark={true} sets={syllablesPerWordSets} />
-                </div>
-            </section>}
-            {statsA && <section>
-                <div className="Content">
-                    <h3>Occurrences</h3>
-                    <form>
-                        <div className="radio">
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="words_per_sentence"
-                                    checked={occurrenceOption === "words_per_sentence"}
-                                    onChange={onOccurrenceOptionChanged}
-                                /> Words per sentence
-                            </label>
-                        </div>
-                        <div className="radio">
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="words_per_paragraph"
-                                    checked={occurrenceOption === "words_per_paragraph"}
-                                    onChange={onOccurrenceOptionChanged}
-                                /> Words per paragraph
-                            </label>
-                        </div>
-                        <div className="radio">
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="clauses_per_sentence"
-                                    checked={occurrenceOption === "clauses_per_sentence"}
-                                    onChange={onOccurrenceOptionChanged}
-                                /> Clauses per sentence
-                            </label>
-                        </div>
-                        <div className="radio">
-                            <label>
-                                <input
-                                    type="radio"
-                                    value="sentences_per_paragraph"
-                                    checked={occurrenceOption === "sentences_per_paragraph"}
-                                    onChange={onOccurrenceOptionChanged}
-                                /> Sentences per paragraph
-                            </label>
-                        </div>
-                    </form>
-                    {occurrenceOption === "words_per_sentence" && <BarWithPercentiles dark={false} sets={wordsPerSentenceSets} />}
-                    {occurrenceOption === "words_per_paragraph" && <BarWithPercentiles dark={false} sets={wordsPerParagraphSets} />}
-                    {occurrenceOption === "clauses_per_sentence" && <BarWithPercentiles dark={false} sets={clausesPerSentenceSets} />}
-                    {occurrenceOption === "sentences_per_paragraph" && <BarWithPercentiles dark={false} sets={sentencesPerParagraphSets} />}
-                </div>
-            </section>}
-            {statsA && <section id="vocabulary">
-                <div className="Content">
-                </div>
-            </section>}
-            {statsA && <section id="grammar">
-                <div className="Content">
-                </div>
-            </section>}
-            {statsA && <section id="tone">
-                <div className="Content">
-                </div>
-            </section>}
-            {statsA && <section id="readability">
-                <div className="Content">
-                </div>
-            </section>}
+                    <button onClick={onAddBook}>Add</button>
+                </aside>
+                <nav>
+                        <ul>
+                            <li><a href="#structure">Structure</a></li>
+                            <li>|</li>
+                            <li><a href="#vocabulary">Vocabulary</a></li>
+                            <li>|</li>
+                            <li><a href="#grammar">Grammar</a></li>
+                            <li>|</li>
+                            <li><a href="#tone">Tone</a></li>
+                            <li>|</li>
+                            <li><a href="#readability">Readability</a></li>
+                        </ul>
+                </nav>
+                <section id="structure">
+                    <div className="Content">
+                        <h3>Count</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    {stats.map((book, index) => {
+                                        return <th key={index}>{book.title}</th>
+                                    })}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Paragraphs</th>
+                                    {stats.map((book, index) => {
+                                        return <td key={index}>{book.stats.structure.paragraphs_count}</td>
+                                    })}
+                                </tr>
+                                <tr>
+                                    <th>Sentences</th>
+                                    {stats.map((book, index) => {
+                                        return <td key={index}>{book.stats.structure.sentences_count}</td>
+                                    })}
+                                </tr>
+                                <tr>
+                                    <th>Words</th>
+                                    {stats.map((book, index) => {
+                                        return <td key={index}>{book.stats.structure.words_count}</td>
+                                    })}
+                                </tr>
+                                <tr>
+                                    <th>Characters</th>
+                                    {stats.map((book, index) => {
+                                        return <td key={index}>{book.stats.structure.characters_count}</td>
+                                    })}
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section>
+                    <div className="Content">
+                        <h3>Length</h3>
+                        <form>
+                            <div className="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value="words"
+                                        checked={lengthOption === "words"}
+                                        onChange={onLengthOptionChanged}
+                                    /> Word Length
+                                </label>
+                            </div>
+                            <div className="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value="sentences"
+                                        checked={lengthOption === "sentences"}
+                                        onChange={onLengthOptionChanged}
+                                    /> Sentence Length
+                                </label>
+                            </div>
+                        </form>
+                        {lengthOption === "words" && <BarWithPercentiles dark={false} sets={wordsLengthSets} />}
+                        {lengthOption === "sentences" && <BarWithPercentiles dark={false} sets={sentencesLengthSets} />}
+                    </div>
+                </section>
+                <section>
+                    <div className="Content">
+                        <h3>Syllables</h3>
+                        <BarWithPercentiles dark={true} sets={syllablesPerWordSets} />
+                    </div>
+                </section>
+                <section>
+                    <div className="Content">
+                        <h3>Occurrences</h3>
+                        <form>
+                            <div className="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value="words_per_sentence"
+                                        checked={occurrenceOption === "words_per_sentence"}
+                                        onChange={onOccurrenceOptionChanged}
+                                    /> Words per sentence
+                                </label>
+                            </div>
+                            <div className="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value="words_per_paragraph"
+                                        checked={occurrenceOption === "words_per_paragraph"}
+                                        onChange={onOccurrenceOptionChanged}
+                                    /> Words per paragraph
+                                </label>
+                            </div>
+                            <div className="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value="clauses_per_sentence"
+                                        checked={occurrenceOption === "clauses_per_sentence"}
+                                        onChange={onOccurrenceOptionChanged}
+                                    /> Clauses per sentence
+                                </label>
+                            </div>
+                            <div className="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        value="sentences_per_paragraph"
+                                        checked={occurrenceOption === "sentences_per_paragraph"}
+                                        onChange={onOccurrenceOptionChanged}
+                                    /> Sentences per paragraph
+                                </label>
+                            </div>
+                        </form>
+                        {occurrenceOption === "words_per_sentence" && <BarWithPercentiles dark={false} sets={wordsPerSentenceSets} />}
+                        {occurrenceOption === "words_per_paragraph" && <BarWithPercentiles dark={false} sets={wordsPerParagraphSets} />}
+                        {occurrenceOption === "clauses_per_sentence" && <BarWithPercentiles dark={false} sets={clausesPerSentenceSets} />}
+                        {occurrenceOption === "sentences_per_paragraph" && <BarWithPercentiles dark={false} sets={sentencesPerParagraphSets} />}
+                    </div>
+                </section>
+                <section id="vocabulary">
+                    <div className="Content">
+                    </div>
+                </section>
+                <section id="grammar">
+                    <div className="Content">
+                    </div>
+                </section>
+                <section id="tone">
+                    <div className="Content">
+                    </div>
+                </section>
+                <section id="readability">
+                    <div className="Content">
+                    </div>
+                </section>
+            </div>}
         </>
     );
 }
 
-
-function BarDemo() {
-    // Mozilla Developer Network
-
-    /**
-     * Returns a random number between min (inclusive) and max (exclusive)
-     */
-    function getRandomArbitrary(min, max) {
-        return Math.random() * (max - min) + min;
-    }
-
-    /**
-     * Returns a random integer between min (inclusive) and max (inclusive).
-     * The value is no lower than min (or the next integer greater than min
-     * if min isn't an integer) and no greater than max (or the next integer
-     * lower than max if max isn't an integer).
-     * Using Math.round() will give you a non-uniform distribution!
-     */
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    const options = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Chart.js Bar Chart',
-            },
-            annotation: {
-                annotations: {
-                    p50: {
-                        type: 'line',
-                        borderColor: 'black',
-                        borderWidth: 5,
-                        scaleID: 'x',
-                        value: 0,
-                        label: {
-                            enabled: true,
-                            backgroundColor: 'black',
-                            borderColor: 'black',
-                            borderRadius: 10,
-                            borderWidth: 2,
-                            content: 'p25',
-                            rotation: '0'
-                        }
-                    }
-                }
-            }
-        }
-    };
-
-    const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-    const data = {
-        labels,
-        datasets: [
-            {
-                label: 'Dataset 1',
-                data: labels.map(() => getRandomInt(0, 1000)),
-                backgroundColor: 'rgba(255, 99, 132, 0.5)',
-            },
-            {
-                label: 'Dataset 2',
-                data: labels.map(() => getRandomInt(0, 1000)),
-                backgroundColor: 'rgba(53, 162, 235, 0.5)',
-            },
-        ],
-    };
-    return <Bar options={options} data={data} />;
-}
 
