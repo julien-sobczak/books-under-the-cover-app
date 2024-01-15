@@ -1,1 +1,0 @@
-{"mappings":"ACAA","sources":["index.7e257903.css","src/App.css"],"sourcesContent":["section {\n  max-width: 50rem;\n  margin: 0 auto;\n}\n\n/*# sourceMappingURL=index.7e257903.css.map */\n","section {\n    max-width: 50rem;\n    margin: 0 auto;\n}\n"],"names":[],"version":3,"file":"index.7e257903.css.map"}
